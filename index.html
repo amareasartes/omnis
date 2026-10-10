@@ -17,30 +17,24 @@
   --se:"Iowan Old Style",Palatino,Georgia,serif;
   --sa:-apple-system,Inter,Helvetica,sans-serif;
   --mo:"Courier New",monospace;
-  --u:8px; --u2:16px; --u3:24px; --u4:32px; --u5:40px; --u6:48px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{background:var(--f);scroll-behavior:smooth}
 body{background:var(--f);color:var(--p);font:15px/1.55 var(--sa);-webkit-font-smoothing:antialiased}
 h1,h2,h3{font-weight:400}
-
 .skip{position:absolute;left:-9999px;top:auto}.skip:focus{left:12px;top:12px;z-index:1000;background:var(--p);color:var(--f);padding:8px 12px}
-
 header{position:sticky;top:0;z-index:100;background:rgba(13,11,9,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(242,236,224,.12);padding:12px 20px;display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
 header .m{font:22px var(--se);letter-spacing:-.01em}
 header .l{font:14px var(--se);font-style:italic;color:var(--sl)}
 header .fi{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
 header .ft{font:11px/1 var(--mo);letter-spacing:.15em;text-transform:uppercase;padding:6px 8px;border:1px solid rgba(242,236,224,.12);color:var(--sl);background:transparent;cursor:pointer}
 header .ft:hover,header .ft.on{color:var(--p);border-color:var(--p)}
-
 .ab{max-width:1240px;margin:0 auto;padding:56px 20px 32px;border-bottom:1px solid rgba(242,236,224,.12)}
 .ab .ol{font:11px var(--mo);letter-spacing:.3em;text-transform:uppercase;color:var(--sl);margin-bottom:20px}
 .ab h1{font:clamp(32px,6vw,64px)/1.02 var(--se);letter-spacing:-.03em;margin-bottom:20px;max-width:900px}
 .ab h1 em{font-style:italic;color:var(--sl)}
 .ab p{font:17px/1.55 var(--se);color:#e8e0d0;max-width:640px}
-
 .fd{max-width:1240px;margin:0 auto;padding:32px 20px 80px;display:grid;grid-template-columns:repeat(6,1fr);gap:16px;grid-auto-flow:dense;align-items:start}
-
 .b{grid-column:span 2;background:var(--p);color:var(--t);--s:#5C4D3F;position:relative;display:flex;flex-direction:column;min-height:224px;cursor:pointer;transition:transform .15s,box-shadow .15s;overflow:hidden}
 .b:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(0,0,0,.5)}
 .b::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--c,var(--c1))}
@@ -56,106 +50,84 @@ header .ft:hover,header .ft.on{color:var(--p);border-color:var(--p)}
 .b .rd .ap{color:var(--c,var(--c1));font-weight:600}
 .b .rd .ap::after{content:" →"}
 .b .nm{position:absolute;top:14px;right:16px;font:11px var(--mo);color:var(--s);opacity:.75}
-
 .b.m{grid-column:span 3}
 .b.g{grid-column:span 4}
 .b.l{grid-column:span 6}
 .b.al{grid-row:span 2}
-
-.b[data-c="1"]{--c:var(--c1)}
-.b[data-c="2"]{--c:var(--c2)}
-.b[data-c="3"]{--c:var(--c3)}
-.b[data-c="4"]{--c:var(--c4)}
-.b[data-c="5"]{--c:var(--c5)}
-.b[data-c="6"]{--c:var(--c6)}
-.b[data-c="7"]{--c:var(--c7)}
-.b[data-c="8"]{--c:var(--c8)}
-.b[data-c="9"]{--c:var(--c9)}
-
-/* formatos */
+.b.lg{min-height:340px}
+.b.sm{min-height:180px}
+.b.destaque{background:var(--c,var(--c1));color:var(--p);--s:rgba(242,236,224,.6)}
+.b.destaque .ti,.b.destaque .q,.b.destaque .pp,.b.destaque .tg,.b.destaque .nm{color:var(--p)}
+.b.destaque .rd{border-top-color:rgba(242,236,224,.25);color:rgba(242,236,224,.7)}
+.b.destaque .rd .a,.b.destaque .rd .ap{color:var(--p)}
+.b.destaque :focus-visible{outline-color:#d9a441}
+.b[data-c="1"]{--c:var(--c1)}.b[data-c="2"]{--c:var(--c2)}.b[data-c="3"]{--c:var(--c3)}
+.b[data-c="4"]{--c:var(--c4)}.b[data-c="5"]{--c:var(--c5)}.b[data-c="6"]{--c:var(--c6)}
+.b[data-c="7"]{--c:var(--c7)}.b[data-c="8"]{--c:var(--c8)}.b[data-c="9"]{--c:var(--c9)}
 .cit{background:var(--t);color:var(--p)}
 .cit .rd{border-top-color:rgba(242,236,224,.2);color:var(--sl)}
 .cit .rd .a,.cit .rd .ap{color:var(--p)}
 .cit .q{font:clamp(20px,2.5vw,28px)/1.2 var(--se);letter-spacing:-.01em}
 .cit .au{font:11px var(--mo);letter-spacing:.2em;text-transform:uppercase;color:var(--sl);margin-top:10px}
 .cit .nt{font:10px var(--mo);letter-spacing:.15em;text-transform:uppercase;color:var(--sl);margin-top:4px;font-style:italic}
-
 .dd .n{font:clamp(48px,7vw,84px)/1 var(--se);letter-spacing:-.04em;color:var(--c,var(--t));margin-bottom:12px}
 .dd .d{font:15px/1.5 var(--se);color:var(--t)}
-
 .sv{background:var(--t);color:var(--p)}
 .sv .rd{border-top-color:rgba(242,236,224,.2);color:var(--sl)}
 .sv .rd .a,.sv .rd .ap{color:var(--p)}
 .sv .ch{font:24px/1.2 var(--se);color:var(--p);margin-bottom:10px}
 .sv .if{font:13px/1.7 var(--mo);color:rgba(242,236,224,.85)}
-
 .tx .ti{font:22px/1.15 var(--se);letter-spacing:-.01em;margin-bottom:10px}
 .tx .cp{font:15px/1.55 var(--se);color:var(--t)}
-
 .pg .pp{font:clamp(24px,3vw,36px)/1.1 var(--se);letter-spacing:-.015em;color:var(--c,var(--t))}
-
 .tr .qd{display:grid;grid-template-columns:1fr 1fr;gap:8px;flex:1}
 .tr .q{border:1.5px solid var(--t);padding:8px;font:12px/1.35 var(--se);color:var(--t);display:flex;flex-direction:column}
 .tr .q .nn{font:9px var(--mo);color:var(--c);margin-bottom:4px;letter-spacing:.1em}
-
 .mm .me{font:15px/1.4 var(--sa);font-weight:600;color:var(--t);text-align:center}
-
 .im .in{padding:0}
 .im .ii{width:100%;height:180px;background:repeating-linear-gradient(45deg,rgba(0,0,0,.06) 0 2px,transparent 2px 10px),var(--c);display:flex;align-items:center;justify-content:center;color:rgba(242,236,224,.85);font:italic 13px var(--se);padding:16px;text-align:center}
 .im img{width:100%;height:auto;display:block}
 .im .le{padding:16px 20px;font:14px/1.4 var(--se);color:var(--t)}
 .im .le .cr{display:block;font:10px var(--mo);letter-spacing:.1em;color:var(--s);margin-top:6px}
-
 .abe{background:var(--t);color:var(--p);padding:0}
 .abe .in{padding:36px 36px 20px}
 .abe .rd{padding:0 36px 20px;border-top:none}
 .abe .rd .a{color:var(--p)}
 .abe .ti{font:clamp(28px,4vw,48px)/1.02 var(--se);letter-spacing:-.025em;margin-bottom:16px;max-width:700px}
 .abe .cp{font:16px/1.55 var(--se);color:rgba(242,236,224,.88);max-width:620px}
-
 .px{background:var(--c1);color:var(--p)}
 .px .rd{border-top-color:rgba(242,236,224,.25)}
 .px .rd .a,.px .rd .ap{color:var(--p)}
 .px .pxl{font:11px var(--mo);letter-spacing:.3em;text-transform:uppercase;opacity:.85;margin-bottom:10px}
 .px .ch{font:13px/1.5 var(--mo);word-break:break-all;color:var(--p)}
-
 .ob{background:var(--t);color:var(--p)}
 .ob .rd{border-top-color:rgba(242,236,224,.2);color:var(--sl)}
 .ob .rd .a,.ob .rd .ap{color:var(--p)}
 .ob .oj{font:italic clamp(24px,3.5vw,40px)/1.15 var(--se);color:var(--p);margin-bottom:14px;letter-spacing:-.015em}
 .ob .ds{font:13px/1.6 var(--mo);color:rgba(242,236,224,.8)}
-
 .dp .vz{font:italic 15px/1.5 var(--se);color:var(--t);border-left:2px solid var(--c);padding-left:14px;margin:6px 0}
 .dp .qm{font:11px var(--mo);letter-spacing:.15em;text-transform:uppercase;color:var(--s);margin-top:10px}
-
 .ct .ps{font:14px/1.5 var(--se);color:var(--t);padding:7px 0;border-bottom:1px solid rgba(0,0,0,.1)}
 .ct .ps:last-child{border:none}
 .ct .ps .nn{font:11px var(--mo);color:var(--c);margin-right:8px}
-
 .fr .ff{font:clamp(26px,3.5vw,42px)/1.1 var(--se);letter-spacing:-.02em;color:var(--c,var(--t))}
 .fr .au{font:11px var(--mo);letter-spacing:.2em;text-transform:uppercase;color:var(--s);margin-top:12px}
-
 .tm .ev{font:14px/1.5 var(--se);color:var(--t);display:grid;grid-template-columns:56px 1fr;gap:10px;padding:6px 0;border-bottom:1px dashed rgba(0,0,0,.12)}
 .tm .ev:last-child{border:none}
 .tm .ev .an{font:12px var(--mo);color:var(--c);letter-spacing:.05em;font-weight:600}
-
 .rt{background:var(--c,var(--c1));color:var(--p)}
 .rt .rd{border-top-color:rgba(242,236,224,.25)}
 .rt .rd .a,.rt .rd .ap{color:var(--p)}
 .rt .in2{font:clamp(18px,2.2vw,24px)/1.3 var(--se);color:var(--p);margin-bottom:10px}
 .rt .nt{font:12px/1.6 var(--mo);color:rgba(242,236,224,.85)}
-
 .fl .fa{font:italic clamp(20px,2.5vw,28px)/1.2 var(--se);letter-spacing:-.01em;color:var(--t)}
 .fl .od{font:11px var(--mo);letter-spacing:.2em;text-transform:uppercase;color:var(--s);margin-top:12px}
-
 .pl .pa{font:clamp(40px,6vw,72px)/1 var(--se);letter-spacing:-.03em;color:var(--c);margin-bottom:6px}
 .pl .cl{font:11px var(--mo);letter-spacing:.25em;text-transform:uppercase;color:var(--s);margin-bottom:14px}
 .pl .df{font:15px/1.55 var(--se);color:var(--t)}
-
 .bn{background:var(--p);min-height:240px;display:flex;align-items:center;justify-content:center}
 .bn .in{padding:0;align-items:center;justify-content:center;text-align:center}
 .bn .vz{font:italic 14px var(--se);color:var(--s);padding:0 24px;line-height:1.6}
-
 .pst{background:var(--t);color:var(--p);min-height:280px}
 .pst .in{padding:32px 28px 20px;justify-content:center}
 .pst .pt{font:clamp(28px,4vw,48px)/1 var(--se);letter-spacing:-.03em;color:var(--p);margin-bottom:20px;text-transform:uppercase}
@@ -163,7 +135,6 @@ header .ft:hover,header .ft.on{color:var(--p);border-color:var(--p)}
 .pst .ft{font:10px var(--mo);letter-spacing:.2em;color:var(--p);margin-top:20px;padding-top:14px;border-top:1px solid rgba(242,236,224,.25);text-transform:uppercase}
 .pst .rd{border-top-color:rgba(242,236,224,.2);color:var(--sl)}
 .pst .rd .a,.pst .rd .ap{color:var(--p)}
-
 .mt{background:var(--t);color:var(--p)}
 .mt .in{padding:24px 22px 16px}
 .mt .p1{font:16px/1.5 var(--se);color:var(--p);margin-bottom:16px;font-style:italic}
@@ -171,7 +142,6 @@ header .ft:hover,header .ft.on{color:var(--p);border-color:var(--p)}
 .mt .pr:last-child{border:none;color:var(--p);text-transform:none;letter-spacing:0}
 .mt .rd{border-top-color:rgba(242,236,224,.2);color:var(--sl)}
 .mt .rd .a,.mt .rd .ap{color:var(--p)}
-
 .jg{background:var(--c,var(--c1));color:var(--p)}
 .jg .in{padding:22px 22px 16px}
 .jg .jk{font:11px var(--mo);letter-spacing:.2em;text-transform:uppercase;color:rgba(242,236,224,.85);margin-bottom:12px}
@@ -179,10 +149,9 @@ header .ft:hover,header .ft.on{color:var(--p);border-color:var(--p)}
 .jg .jd{font:13.5px/1.6 var(--se);color:rgba(242,236,224,.9)}
 .jg .rd{border-top-color:rgba(242,236,224,.25);color:rgba(242,236,224,.8)}
 .jg .rd .a,.jg .rd .ap{color:var(--p)}
-
 .pn{max-height:0;overflow:hidden;transition:max-height .35s ease;background:#151210;color:var(--p);border-top:1px solid rgba(242,236,224,.15)}
 .pn.on{max-height:4000px}
-.pn .cp{padding:20px 22px;font-size:14px;line-height:1.65}
+.pn .cp{padding:20px 22px;font-size:14px;line-height:1.65;color:var(--p)}
 .pn .sc{margin-bottom:16px}
 .pn .sc:last-child{margin-bottom:0}
 .pn .rt2{font:10px var(--mo);letter-spacing:.25em;text-transform:uppercase;color:var(--sl);margin-bottom:8px;display:block}
@@ -196,21 +165,26 @@ header .ft:hover,header .ft.on{color:var(--p);border-color:var(--p)}
 .pn .cx span:hover{border-color:var(--p)}
 .pn .jm{background:var(--c,var(--c1));color:var(--p);padding:12px 14px;margin:10px 0;font:13.5px/1.5 var(--sa);border-radius:2px}
 .pn .jm b{font-weight:600}
-
 .b.hd{display:none}
-
 :focus-visible{outline:2px solid #d9a441;outline-offset:2px}
 .b :focus-visible{outline-color:var(--c,#4A0E1E)}
 .cit :focus-visible,.sv :focus-visible,.pst :focus-visible,.mt :focus-visible,
 .jg :focus-visible,.abe :focus-visible,.ob :focus-visible,.px :focus-visible,
 .rt :focus-visible,.pn :focus-visible{outline-color:#d9a441}
+.cit .tg{color:var(--sl)}
+.abe .rd,.px .rd,.rt .rd{color:rgba(242,236,224,.8)}
+.cit .nm,.sv .nm,.pst .nm,.mt .nm,.jg .nm,.ob .nm,.px .nm,.rt .nm,.abe .nm{color:var(--p)}
+.dp .qm{font-size:11px}
+.share{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.pn .share button{font:11px var(--mo);letter-spacing:.1em;text-transform:uppercase;min-height:32px;padding:6px 12px;border:1px solid rgba(242,236,224,.3);background:transparent;color:var(--p);cursor:pointer}
+.pn .share button:hover{border-color:var(--p);background:rgba(242,236,224,.05)}
+.balerta{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--t);color:var(--p);padding:10px 18px;font:12px var(--mo);letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(242,236,224,.3);opacity:0;pointer-events:none;transition:opacity .2s;z-index:1000}
+.balerta.on{opacity:1}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important;animation:none!important}}
-
 footer{max-width:1240px;margin:0 auto;padding:40px 20px 60px;border-top:1px solid rgba(242,236,224,.12);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;font:12px var(--mo);color:var(--sl);line-height:1.9}
 footer .rt3{font:10px var(--sa);font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--p);display:block;margin-bottom:6px}
 footer a{color:var(--p);text-decoration:none;border-bottom:1px solid rgba(242,236,224,.25)}
 footer a:hover{border-color:var(--p)}
-
 .aviso{max-width:1240px;margin:0 auto;padding:24px 20px 48px;border-top:1px solid rgba(242,236,224,.12);display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .aviso .box{background:rgba(242,236,224,.05);border:1px solid rgba(242,236,224,.12);padding:22px 24px}
 .aviso .box .rot{font:10px var(--sa);font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--p);display:block;margin-bottom:12px}
@@ -219,7 +193,6 @@ footer a:hover{border-color:var(--p)}
 .aviso .box a:hover{border-color:var(--p)}
 .aviso .box .mail{font:14px/1.5 var(--mo);color:var(--p);word-break:break-all}
 .aviso .box .small{font:13px/1.5 var(--sa);color:var(--sl);margin-top:10px}
-
 @media(max-width:900px){
   .fd{grid-template-columns:repeat(2,1fr);padding:20px 14px 64px;gap:12px}
   .b,.b.m,.b.g,.b.l{grid-column:span 2}
@@ -248,6 +221,7 @@ footer a:hover{border-color:var(--p)}
   .cit .q,.cit .au,.abe .ti,.abe .cp,.px .ch,.dd .n,.pg .pp,.fr .ff,.pl .pa,.tm .ev .an{color:#000}
   footer,.aviso{border-color:#000;color:#000}
   .aviso .box{border-color:#000;background:#fff}
+  .share,.balerta{display:none}
 }
 </style>
 </head>
@@ -269,7 +243,7 @@ footer a:hover{border-color:var(--p)}
 </header>
 
 <section class="ab">
-  <div class="ol">v4.4 · outubro 2026 · página viva</div>
+  <div class="ol">v4.7.1 · outubro 2026 · página viva</div>
   <h1>Isto é sobre <em>vida</em><br>e <em>encontro</em>.</h1>
   <p>Uma página que vai sendo alimentada. Cada bloco tem aprofundamento, referências verificadas, serviços e jogos. Clique para abrir. Passe adiante o que te tocar.</p>
 </section>
@@ -283,7 +257,7 @@ footer a:hover{border-color:var(--p)}
     <div class="ti">tudo que cabe numa página.</div>
     <div class="cp">Cinco áreas. Nenhuma hierarquia fixa. Você lê na ordem que quiser. O que te tocar, você salva. O que te mover, você passa adiante.</div>
   </div>
-  <div class="rd"><span>omnis · v4.4</span><span class="ap">sobre</span></div>
+  <div class="rd"><span>omnis · v4.7.1</span><span class="ap">sobre</span></div>
   <div class="pn"><div class="cp">
     <div class="sc"><span class="rt2">Sobre</span>OMNIS nasceu em 2007 como uma publicação brasileira dedicada ao universo GLBT sem clichês. Voltou em 2026 como página viva.</div>
     <div class="sc"><span class="rt2">Como ler</span>Clique em qualquer bloco. Abre painel com contexto, referências, jogos, perguntas e conexões.</div>
@@ -303,7 +277,7 @@ footer a:hover{border-color:var(--p)}
   <div class="pn"><div class="cp">
     <div class="sc"><span class="rt2">Contexto</span>Brasil está há 18 anos no topo do ranking mundial de países que mais matam pessoas trans. Queda de 34% em relação a 2024 (de 122 para 80 mortes). Mas as tentativas de homicídio subiram de 57 para 75 no mesmo período — a violência não diminuiu, mudou de forma.</div>
     <div class="sc"><span class="rt2">Fonte primária</span><ul>
-      <li><a href="https://antrabrasil.org/assassinatos/" target="_blank" rel="noopener noreferrer">ANTRA — Dossiê 2026, 9ª edição (PDF direto)</a></li>
+      <li><a href="https://antrabrasil.org/assassinatos/" target="_blank" rel="noopener noreferrer">ANTRA — Dossiê 2026, 9ª edição</a></li>
       <li><a href="https://www.gov.br/mdh" target="_blank" rel="noopener noreferrer">Ministério dos Direitos Humanos</a></li>
     </ul></div>
     <div class="sc"><span class="rt2">Jogo · quem eram</span><div class="jm"><b>Proposta:</b> escolha um dos 80 nomes. Pesquise. Escreva 100 palavras sobre quem era essa pessoa. Mande para amareasartes@gmail.com. Entra na próxima versão.</div></div>
@@ -342,7 +316,6 @@ footer a:hover{border-color:var(--p)}
   <div class="pn"><div class="cp">
     <div class="sc"><span class="rt2">Sobre</span>Escrita para o OMNIS. A pergunta da criança é a pergunta que muitas famílias adotivas LGBTQIAPN+ ouvem. A resposta nomeia a origem.</div>
     <div class="sc"><span class="rt2">Para aprofundar</span><ul><li><a href="https://www.cnj.jus.br" target="_blank" rel="noopener noreferrer">CNJ — Sistema Nacional de Adoção</a></li><li>Vara da Infância SP — <em>Adoção: guia prático</em></li></ul></div>
-    <div class="sc"><span class="rt2">Conexões</span><div class="cx"><span data-ir="08">parentesco</span><span data-ir="09">foto de família</span><span data-ir="34">escreva uma carta</span></div></div>
   </div></div>
 </article>
 
@@ -355,7 +328,7 @@ footer a:hover{border-color:var(--p)}
   </div>
   <div class="rd"><span>CVV</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">Sobre</span>CVV completa 64 anos em 2026. No segundo trimestre, recebeu 553.520 ligações para o número 188 — 373.847 delas foram atendimentos concluídos. Gratuito, 24h, sigiloso, anônimo. Fonte: Relatório de Atividades CVV, 2º trimestre de 2026 (verificado em outubro de 2026).</div>
+    <div class="sc"><span class="rt2">CVV · 2º trimestre de 2026</span>553.520 ligações recebidas pelo 188 entre abril e junho. 373.847 foram atendimentos concluídos. A diferença corresponde a chamadas abandonadas ou não completadas. Média de 2.160 voluntários ativos por mês. Fonte: Relatório de Atividades Nacionais, CVV.</div>
     <div class="sc"><span class="rt2">Outros canais</span><ul>
       <li>Chat: <a href="https://www.cvv.org.br" target="_blank" rel="noopener noreferrer">cvv.org.br</a></li>
       <li>Email: apoioemocional@cvv.org.br</li>
@@ -369,19 +342,17 @@ footer a:hover{border-color:var(--p)}
 <article class="b dd" data-c="4" data-tema="sociedade">
   <span class="nm" aria-hidden="true">06</span>
   <div class="in">
-    <div class="tg"><span>raça</span><span>algoritmo</span><span class="v">dado verificado</span></div>
-    <div class="co"><div class="n">90,5%</div><div class="d">das pessoas presas por reconhecimento facial no Brasil, entre março e outubro de 2019, eram negras.</div></div>
+    <div class="tg"><span>raça</span><span>violência</span><span class="v">dado verificado</span></div>
+    <div class="co"><div class="n">90,5%</div><div class="d">dos 42 casos com informação de cor registrados em prisões por reconhecimento facial no Brasil em 2019 eram pessoas negras.</div></div>
   </div>
   <div class="rd"><span>CESeC · 2019</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">Contexto</span>Estudo do CESeC (Centro de Estudos de Segurança e Cidadania), publicado em novembro de 2019 em parceria com o The Intercept Brasil. Analisou 151 prisões por reconhecimento facial em cinco estados entre março e outubro de 2019: 90,5% eram pessoas negras.</div>
-    <div class="sc"><span class="rt2">Atualização</span>Relatório de 2023 da mesma rede registrou 92% — o problema se agravou. Recomendamos conferir o relatório mais recente antes de usar o número em outros contextos.</div>
+    <div class="sc"><span class="rt2">Reconhecimento facial (mar–out 2019)</span>151 prisões por reconhecimento facial em cinco estados. Em 42 casos com registro de cor, 90,5% eram negras. Bahia concentrou 51,7% das prisões; Rio, 37,1%. Fonte: CESeC / The Intercept Brasil (2019).</div>
     <div class="sc"><span class="rt2">Fonte primária</span><ul>
       <li><a href="https://cesecseguranca.com.br/artigo/levantamento-revela-que-905-dos-presos-por-monitoramento-facial-no-brasil-sao-negros/" target="_blank" rel="noopener noreferrer">CESeC — "Retratos da violência" (2019)</a></li>
       <li><a href="https://cesecseguranca.com.br" target="_blank" rel="noopener noreferrer">CESeC — página principal</a></li>
-      <li>Tarcízio Silva, <em>Racismo algorítmico</em> (Jandaíra, 2022)</li>
     </ul></div>
-    <div class="sc"><span class="rt2">Jogo · algoritmo</span><div class="jm"><b>Proposta:</b> teste três apps de banco, transporte e rede social. O que cada um te oferece? O que cada um te esconde? Anote. É racismo algorítmico em ato.</div></div>
+    <div class="sc"><span class="rt2">Jogo · algoritmo</span><div class="jm"><b>Proposta:</b> teste três apps de banco, transporte e rede social. O que cada um te oferece? O que cada um te esconde? Anote.</div></div>
   </div></div>
 </article>
 
@@ -395,8 +366,11 @@ footer a:hover{border-color:var(--p)}
   <div class="rd"><span>referência</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
     <div class="sc"><span class="rt2">De onde vem</span>Bispo do Rosário (1909–1989) passou décadas internado na Colônia Juliano Moreira, RJ. Bordou mantos, estandartes, objetos. Catalogou o mundo.</div>
-    <div class="sc"><span class="rt2">Para ver</span><ul><li><a href="https://museubispodorosario.com" target="_blank" rel="noopener noreferrer">Museu Bispo do Rosário</a></li><li>Documentário <em>O Prisioneiro da Passagem</em> (dir. Hugo Denizart, 1982)</li><li>Livro <em>O Senhor do Labirinto</em>, de Luciana Hidalgo</li></ul></div>
-    <div class="sc"><span class="rt2">Jogo · catálogo</span><div class="jm"><b>Proposta:</b> liste 10 objetos da sua casa que contam quem você é. Sem explicar. Só a lista. A lista é o inventário. O inventário é a obra.</div></div>
+    <div class="sc"><span class="rt2">Para ver e ler</span><ul>
+      <li><a href="https://museubispodorosario.com" target="_blank" rel="noopener noreferrer">Museu Bispo do Rosário</a></li>
+      <li>Luciana Hidalgo, <em>Arthur Bispo do Rosário: o senhor do labirinto</em> (edição a conferir)</li>
+    </ul></div>
+    <div class="sc"><span class="rt2">Jogo · catálogo</span><div class="jm"><b>Proposta:</b> liste 10 objetos da sua casa que contam quem você é. Sem explicar. Só a lista.</div></div>
   </div></div>
 </article>
 
@@ -411,7 +385,7 @@ footer a:hover{border-color:var(--p)}
   <div class="pn"><div class="cp">
     <div class="sc"><span class="rt2">A hipótese</span>Há vínculos escolhidos que permanecem. E há escolhas que precisam ser refeitas. Família não é dado. É decisão contínua.</div>
     <div class="sc"><span class="rt2">Para ler</span><ul><li>bell hooks, <em>All About Love</em> (2000)</li><li>IBGE — novas configurações familiares</li></ul></div>
-    <div class="sc"><span class="rt2">Jogo · família</span><div class="jm"><b>Proposta:</b> escreva numa folha os nomes de quem é da sua família. Não precisa ser sangue. Depois escreva o motivo. Só o motivo.</div></div>
+    <div class="sc"><span class="rt2">Jogo · família</span><div class="jm"><b>Proposta:</b> escreva numa folha os nomes de quem é da sua família. Não precisa ser sangue. Depois escreva o motivo.</div></div>
   </div></div>
 </article>
 
@@ -426,7 +400,6 @@ footer a:hover{border-color:var(--p)}
   <div class="rd"><span>família · álbum</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
     <div class="sc"><span class="rt2">Sobre</span>Bloco reservado para uma foto de álbum de família onde alguém foi recortado. Enquanto isso, a ilustração funciona como lembrete do que falta.</div>
-    <div class="sc"><span class="rt2">Jogo · arquivo</span><div class="jm"><b>Proposta:</b> abra um álbum de família. Encontre uma foto onde alguém foi cortado, onde falta alguém. Escreva 50 palavras sobre quem falta.</div></div>
   </div></div>
 </article>
 
@@ -441,26 +414,24 @@ footer a:hover{border-color:var(--p)}
   <div class="pn"><div class="cp">
     <div class="sc"><span class="rt2">Sobre</span>O corpo lembra de coisas que a cabeça decidiu esquecer. Vergonha, medo, raiva voltam às 3h. Piada. Mas também verdade.</div>
     <div class="sc"><span class="rt2">Para ler</span><ul><li>Bessel van der Kolk, <em>O corpo guarda as marcas</em> (Sextante, 2020)</li></ul></div>
-    <div class="sc"><span class="rt2">Jogo · 3h da manhã</span><div class="jm"><b>Proposta:</b> o que seu corpo te lembra às 3h? Escreva uma frase. Só uma. Envie.</div></div>
   </div></div>
 </article>
 
-<!-- 11 PrEP (CORRIGIDO) -->
+<!-- 11 PrEP -->
 <article class="b dd" data-c="7" data-tema="corpo">
   <span class="nm" aria-hidden="true">11</span>
   <div class="in">
-    <div class="tg"><span>hiv</span><span>prevenção</span><span class="v">serviço</span></div>
+    <div class="tg"><span>HIV</span><span>prevenção</span><span class="v">dado verificado</span></div>
     <div class="co"><div class="n" style="font-size:34px">PrEP oral</div><div class="d">gratuita pelo SUS desde 2018. Reduz significativamente o risco de infecção quando usada com adesão. Disponível em SAE e CTA em todo o país.</div></div>
   </div>
   <div class="rd"><span>Ministério da Saúde</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">Contexto</span>PrEP oral em comprimidos disponível gratuitamente no SUS desde 2018. Eficácia elevada quando usada com adesão. Outras formas de prevenção combinada: camisinha, testagem regular, PEP.</div>
-    <div class="sc"><span class="rt2">Status da PrEP injetável</span>Em 12 de janeiro de 2026, a Anvisa aprovou o lenacapavir (injeção subcutânea a cada seis meses) para PrEP. O medicamento ainda não está incorporado ao SUS. Em julho de 2026, o Ministério da Saúde informou que a negociação com o fabricante não chegou a acordo e que encaminharia à Conitec o cabotegravir, outra PrEP injetável. Verificado em outubro de 2026; confirme em gov.br/saude e na Conitec antes de citar.</div>
+    <div class="sc"><span class="rt2">Contexto</span>PrEP oral em comprimidos disponível gratuitamente no SUS desde 2018. Eficácia elevada quando usada com adesão.</div>
+    <div class="sc"><span class="rt2">PrEP injetável</span><b>Lenacapavir:</b> aprovado pela Anvisa em 12/01/2026 como PrEP semestral injetável. Indicação: adultos e adolescentes ≥12 anos, ≥35 kg. Ainda sem incorporação ao SUS. <b>Cabotegravir:</b> recomendação preliminar favorável da Conitec em agosto de 2026; consulta pública encerrada em 31/08/2026. Decisão final pendente.</div>
     <div class="sc"><span class="rt2">Onde acessar</span><ul>
       <li>SAE e CTA — em todo o país</li>
-      <li><a href="https://imprep.org" target="_blank" rel="noopener noreferrer">imprep.org</a> — mapa de serviços</li>
+      <li><a href="https://imprep.org" target="_blank" rel="noopener noreferrer">imprep.org</a></li>
     </ul></div>
-    <div class="sc"><span class="rt2">Jogo · 3 perguntas</span><div class="jm"><b>Proposta:</b> você sabe o que é PrEP? Sabe onde acessar na sua cidade? Sabe se você pode tomar? Se a resposta for não para alguma, procure. Depois conte para alguém.</div></div>
   </div></div>
 </article>
 
@@ -474,8 +445,7 @@ footer a:hover{border-color:var(--p)}
   <div class="rd"><span>referência</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
     <div class="sc"><span class="rt2">De onde vem</span>Em <em>All About Love</em> (2000), hooks trabalha com a formulação de M. Scott Peck: amor como "vontade de estender o eu para nutrir o próprio crescimento espiritual ou o de outra pessoa". A frase do bloco é síntese nossa.</div>
-    <div class="sc"><span class="rt2">Para ler</span><ul><li>bell hooks, <em>All About Love</em> (2000)</li><li>M. Scott Peck, <em>The Road Less Traveled</em> (1978) — fonte original da definição</li><li>bell hooks, <em>Ensinando a transgredir</em> (1994)</li></ul></div>
-    <div class="sc"><span class="rt2">Jogo · prática</span><div class="jm"><b>Proposta:</b> escreva uma ação concreta de amor que você pode fazer hoje. Só uma. Faça. Depois conte.</div></div>
+    <div class="sc"><span class="rt2">Para ler</span><ul><li>bell hooks, <em>All About Love</em> (2000)</li><li>M. Scott Peck, <em>The Road Less Traveled</em> (1978)</li></ul></div>
   </div></div>
 </article>
 
@@ -488,9 +458,8 @@ footer a:hover{border-color:var(--p)}
   </div>
   <div class="rd"><span>pergunta aberta</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">Sobre a pergunta</span>Pergunta sem resposta única. Muitas pessoas LGBTQIAPN+ fazem ao envelhecer sem filhos, sem família de origem, sem rede. Pesquisas sobre o tema existem, mas ainda são poucas no Brasil.</div>
+    <div class="sc"><span class="rt2">Sobre</span>Pergunta sem resposta única. Muitas pessoas LGBTQIAPN+ fazem ao envelhecer sem filhos, sem família de origem, sem rede. Pesquisas sobre o tema existem, mas ainda são poucas no Brasil.</div>
     <div class="sc"><span class="rt2">Onde buscar</span><ul><li>CRAS — Centro de Referência de Assistência Social</li><li>Disque 100 — violência contra idosos</li><li>CVV 188</li></ul></div>
-    <div class="sc"><span class="rt2">Jogo · responder</span><div class="jm"><b>Proposta:</b> responda a pergunta. Sem se enganar. Depois pergunte a alguém mais velho. Depois pergunte a alguém mais novo.</div></div>
   </div></div>
 </article>
 
@@ -516,11 +485,11 @@ footer a:hover{border-color:var(--p)}
   <span class="nm" aria-hidden="true">14</span>
   <div class="in">
     <div class="tg"><span>trabalho</span><span>dinheiro</span><span class="v">dado verificado</span></div>
-    <div class="co"><div class="n" style="font-size:38px">R$ 7.565</div><div class="d">é o salário mínimo necessário para uma família de quatro pessoas, segundo o Dieese (agosto 2026). O mínimo vigente é R$ 1.621.</div></div>
+    <div class="co"><div class="n" style="font-size:38px">R$ 7.750</div><div class="d">era o salário mínimo necessário para uma família de quatro pessoas em setembro de 2026, segundo o Dieese. Em agosto, era R$ 7.565,86. O mínimo vigente nos dois meses: R$ 1.621.</div></div>
   </div>
   <div class="rd"><span>Dieese · 2026</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">Contexto</span>Cálculo do Dieese cobre alimentação, moradia, saúde, educação, transporte, lazer, vestuário, higiene, previdência. Diferença de 4,67 vezes.</div>
+    <div class="sc"><span class="rt2">Contexto</span>Cálculo do Dieese cobre alimentação, moradia, saúde, educação, transporte, lazer, vestuário, higiene, previdência. A diferença entre o necessário e o vigente varia mês a mês. Em agosto, foi de 4,67x; em setembro, de 4,78x.</div>
     <div class="sc"><span class="rt2">Fontes</span><ul><li><a href="https://www.dieese.org.br" target="_blank" rel="noopener noreferrer">Dieese — cesta básica</a></li><li><a href="https://www.ibge.gov.br" target="_blank" rel="noopener noreferrer">IBGE — PNAD Contínua</a></li></ul></div>
     <div class="sc"><span class="rt2">Jogo · contas</span><div class="jm"><b>Proposta:</b> some seus gastos do mês. Compare com o que você ganha. Escreva o que falta. Só o número.</div></div>
   </div></div>
@@ -535,8 +504,8 @@ footer a:hover{border-color:var(--p)}
   </div>
   <div class="rd"><span>referência</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">Sobre</span><em>Eu sou o monstro que vos fala</em> (2020) reúne conferência de Preciado na Escola da Causa Freudiana, Paris, 2019. Intervenção sobre psicanálise, gênero, e a posição do monstro.</div>
-    <div class="sc"><span class="rt2">Para ler</span><ul><li>Preciado, <em>Eu sou o monstro que vos fala</em> (2020)</li><li>Preciado, <em>Testo Junkie</em> (2008)</li><li>Preciado, <em>Um apartamento em Urano</em> (2019)</li></ul></div>
+    <div class="sc"><span class="rt2">Sobre</span><em>Eu sou o monstro que vos fala</em> (2020) reúne conferência de Preciado na Escola da Causa Freudiana, Paris, 2019.</div>
+    <div class="sc"><span class="rt2">Para ler</span><ul><li>Preciado, <em>Eu sou o monstro que vos fala</em> (2020)</li><li>Preciado, <em>Testo Junkie</em> (2008)</li></ul></div>
   </div></div>
 </article>
 
@@ -554,10 +523,8 @@ footer a:hover{border-color:var(--p)}
   </div>
   <div class="rd"><span>tirinha · raça</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">Sobre</span>A frase "aqui todo mundo é igual" é dita com frequência em espaços LGBTQIAPN+. A cena mostra que não é bem assim. Convidado a olhar a fila com atenção.</div>
-    <div class="sc"><span class="rt2">Para ler</span><ul><li>Djamila Ribeiro, <em>Pequeno manual antirracista</em> (2019)</li><li>Cida Bento, <em>O pacto da branquitude</em> (2022)</li><li>Carla Akotirene, <em>Interseccionalidade</em> (2019)</li></ul></div>
-    <div class="sc"><span class="rt2">Nota ética</span>Escrita por nós. Idealmente desenho e revisão crítica por pessoa negra, com crédito e remuneração.</div>
-    <div class="sc"><span class="rt2">Jogo · fila</span><div class="jm"><b>Proposta:</b> observe uma fila esta semana. Quem passa primeiro? Quem espera mais? Anote. Sem julgar. Só observar.</div></div>
+    <div class="sc"><span class="rt2">Sobre</span>A frase "aqui todo mundo é igual" é dita com frequência em espaços LGBTQIAPN+. A cena mostra que não é bem assim.</div>
+    <div class="sc"><span class="rt2">Nota ética</span>Escrita sem revisão de pessoa negra. Revisão e crédito pendentes.</div>
   </div></div>
 </article>
 
@@ -582,19 +549,17 @@ footer a:hover{border-color:var(--p)}
 <article class="b dd" data-c="5" data-tema="territorio">
   <span class="nm" aria-hidden="true">17</span>
   <div class="in">
-    <div class="tg"><span>território</span><span>clima</span><span class="v">dado verificado</span></div>
-    <div class="co"><div class="n">68,7<span style="font-size:34px">milhões</span></div><div class="d">de pessoas deslocadas internamente no mundo por conflito ou violência, ao final de 2025. Cerca de 800 mil refugiadas vivem no Brasil.</div></div>
+    <div class="tg"><span>território</span><span>deslocamento</span><span class="v">dado verificado</span></div>
+    <div class="co"><div class="n">68,7<span style="font-size:34px"> milhões</span></div><div class="d">de pessoas deslocadas internamente no mundo por conflito ou violência, ao final de 2025. Mais de 800 mil pessoas refugiadas ou em necessidade de proteção internacional vivem no Brasil.</div></div>
   </div>
   <div class="rd"><span>ACNUR · Global Trends 2025</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">Contexto global (fim de 2025)</span>68,7 milhões de pessoas deslocadas internamente por conflito ou violência no mundo. 41,6 milhões de refugiadas (soma dos mandatos do ACNUR e da UNRWA). 9 milhões de solicitantes de asilo com pedido pendente. 4,5 milhões de pessoas apátridas. 39% da população refugiada é composta por crianças.</div>
+    <div class="sc"><span class="rt2">Contexto global (fim de 2025)</span>68,7 milhões de pessoas deslocadas internamente por conflito ou violência no mundo. 41,6 milhões de refugiadas. 9 milhões de solicitantes de asilo.</div>
     <div class="sc"><span class="rt2">Brasil</span>Mais de 800 mil pessoas refugiadas ou em necessidade de proteção internacional vivem no Brasil. As enchentes no Rio Grande do Sul, em 2024, provocaram cerca de 775 mil deslocamentos internos.</div>
-    <div class="sc"><span class="rt2">Fonte primária</span><ul>
+    <div class="sc"><span class="rt2">Fontes</span><ul>
       <li><a href="https://www.acnur.org/portugues/" target="_blank" rel="noopener noreferrer">ACNUR Brasil</a></li>
-      <li><a href="https://www.internal-displacement.org" target="_blank" rel="noopener noreferrer">IDMC — Internal Displacement Monitoring Centre</a></li>
-      <li><a href="https://www.defesacivil.gov.br" target="_blank" rel="noopener noreferrer">Defesa Civil</a></li>
+      <li><a href="https://www.internal-displacement.org" target="_blank" rel="noopener noreferrer">IDMC</a></li>
     </ul></div>
-    <div class="sc"><span class="rt2">Jogo · mapa</span><div class="jm"><b>Proposta:</b> marque no mapa do seu bairro onde já houve enchente, deslizamento, despejo. Anote. Guarde. Envie foto.</div></div>
   </div></div>
 </article>
 
@@ -610,7 +575,6 @@ footer a:hover{border-color:var(--p)}
     <div class="sc"><span class="rt2">De onde vem</span>Abramović (1946–) trabalha presença, duração, corpo como material. Em <em>The Artist is Present</em> (MoMA, 2010), ficou em silêncio olhando estranhos por horas.</div>
     <div class="sc"><span class="rt2">Para ver</span><ul><li><em>The Artist is Present</em> (documentário, 2012)</li></ul></div>
     <div class="sc"><span class="rt2">Para ler</span><ul><li>Marina Abramović, <em>Walk Through Walls</em> (memórias, 2016)</li></ul></div>
-    <div class="sc"><span class="rt2">Jogo · presença</span><div class="jm"><b>Proposta:</b> olhe nos olhos de alguém durante 60 segundos. Sem falar. Sem rir. Sem desviar. Depois conte o que sentiu.</div></div>
   </div></div>
 </article>
 
@@ -618,8 +582,8 @@ footer a:hover{border-color:var(--p)}
 <article class="b m tx" data-c="7" data-tema="corpo">
   <span class="nm" aria-hidden="true">19</span>
   <div class="in">
-    <div class="tg"><span>hiv</span><span>ativismo</span><span>saúde</span></div>
-    <div class="co"><div class="ti">O vírus mudou. O preconceito não.</div><div class="cp">Hoje, carga viral indetectável significa transmissão zero. PrEP oral gratuita pelo SUS. PEP em até 72 horas. Testagem rápida em serviços de saúde. A ciência fez a parte dela. Falta o resto.</div></div>
+    <div class="tg"><span>HIV</span><span>ativismo</span><span>saúde</span></div>
+    <div class="co"><div class="ti">O vírus mudou. O preconceito não.</div><div class="cp">Hoje, carga viral indetectável significa transmissão sexual zero. PrEP oral gratuita pelo SUS. PEP em até 72 horas. Testagem rápida em serviços de saúde. A ciência fez a parte dela. Falta o resto.</div></div>
   </div>
   <div class="rd"><span>HIV · memória e agora</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
@@ -629,13 +593,7 @@ footer a:hover{border-color:var(--p)}
       <li><b>PEP</b> — em até 72h em serviços de urgência</li>
       <li><b>Autoteste</b> — disponível gratuitamente em muitos municípios</li>
     </ul></div>
-    <div class="sc"><span class="rt2">O que não mudou</span>O estigma. Pessoas vivendo com HIV ainda enfrentam discriminação no trabalho, na família, na saúde. Muitas escondem a sorologia.</div>
-    <div class="sc"><span class="rt2">Para ler</span><ul>
-      <li><a href="https://www.gov.br/saude" target="_blank" rel="noopener noreferrer">Ministério da Saúde — Boletim epidemiológico</a></li>
-      <li><a href="https://unaids.org.br" target="_blank" rel="noopener noreferrer">UNAIDS Brasil</a></li>
-      <li><a href="https://imprep.org" target="_blank" rel="noopener noreferrer">imprep.org</a></li>
-    </ul></div>
-    <div class="sc"><span class="rt2">Jogo · 1 pergunta</span><div class="jm"><b>Proposta:</b> você sabe onde fazer teste de HIV na sua cidade, de graça, hoje? Se não sabe, descubra. Leva 5 minutos. Salva uma vida.</div></div>
+    <div class="sc"><span class="rt2">O que não mudou</span>O estigma. Pessoas vivendo com HIV ainda enfrentam discriminação no trabalho, na família, na saúde.</div>
   </div></div>
 </article>
 
@@ -649,9 +607,7 @@ footer a:hover{border-color:var(--p)}
   </div>
   <div class="rd"><span>cultura pop</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">Sobre</span>A cultura pop não é neutra. Carrega disputas: quem aparece, quem desaparece, quem é apropriado, quem é creditado. Mas também é festa, encontro, comunidade.</div>
-    <div class="sc"><span class="rt2">Para pesquisar</span><ul><li>Funk brasileiro — história, política, resistência</li><li>Apropriação cultural na moda e na música</li><li>TikTok e novas estéticas dissidentes</li><li>Fandoms como comunidade</li></ul></div>
-    <div class="sc"><span class="rt2">Jogo · refrão</span><div class="jm"><b>Proposta:</b> escreva um refrão de 4 linhas sobre sua vida. Sem rimar. Sem se preocupar com melodia. Só o refrão. Mande.</div></div>
+    <div class="sc"><span class="rt2">Sobre</span>A cultura pop não é neutra. Carrega disputas: quem aparece, quem desaparece, quem é apropriado, quem é creditado.</div>
   </div></div>
 </article>
 
@@ -664,9 +620,7 @@ footer a:hover{border-color:var(--p)}
   </div>
   <div class="rd"><span>pergunta aberta</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">Sobre</span>Respirar, piscar, tremer, suar, envelhecer, cicatrizar, lembrar, esquecer. O corpo faz coisas que a gente não manda. E às vezes faz coisas que a gente não quer.</div>
-    <div class="sc"><span class="rt2">Para ler</span><ul><li>Bessel van der Kolk, <em>O corpo guarda as marcas</em> (2014)</li><li>António Damásio, <em>O erro de Descartes</em> (1994)</li></ul></div>
-    <div class="sc"><span class="rt2">Jogo · corpo</span><div class="jm"><b>Proposta:</b> feche os olhos por 60 segundos. Sinta o que seu corpo faz sem você mandar. Anote depois. Sem julgar.</div></div>
+    <div class="sc"><span class="rt2">Sobre</span>Respirar, piscar, tremer, suar, envelhecer, cicatrizar, lembrar, esquecer. O corpo faz coisas que a gente não manda.</div>
   </div></div>
 </article>
 
@@ -679,8 +633,7 @@ footer a:hover{border-color:var(--p)}
   </div>
   <div class="rd"><span>qualquer valor</span><span class="ap">sobre</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">Para que serve</span>OMNIS é feito por uma pessoa, de forma voluntária. PIX cobre custos (domínio, hospedagem, impressão, materiais) e permite remunerar colaboradores.</div>
-    <div class="sc"><span class="rt2">Transparência</span>Prestação de contas pública quando houver volume suficiente para ser útil. Quem apoia pode pedir detalhamento pelo e-mail de contato.</div>
+    <div class="sc"><span class="rt2">Para que serve</span>OMNIS é feito por uma pessoa, de forma voluntária. PIX cobre custos e permite remunerar colaboradores.</div>
   </div></div>
 </article>
 
@@ -693,8 +646,7 @@ footer a:hover{border-color:var(--p)}
   </div>
   <div class="rd"><span>koenig · adaptado</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">De onde vem</span>John Koenig inventou <em>sonder</em> para o <em>Dictionary of Obscure Sorrows</em>. "Sondar" é adaptação nossa. A operação: nomear em português algo que ainda não vivia em nós.</div>
-    <div class="sc"><span class="rt2">Jogo · palavra</span><div class="jm"><b>Proposta:</b> invente uma palavra que descreva algo que você sente mas não sabe nomear. Mande. Entra na próxima versão.</div></div>
+    <div class="sc"><span class="rt2">De onde vem</span>John Koenig inventou <em>sonder</em> para o <em>Dictionary of Obscure Sorrows</em>. "Sondar" é adaptação nossa.</div>
   </div></div>
 </article>
 
@@ -707,9 +659,7 @@ footer a:hover{border-color:var(--p)}
   </div>
   <div class="rd"><span>objeto · trabalho</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">Sobre</span>O botão solto viaja. Está em vários blocos. Um objeto mínimo que atravessa a página.</div>
-    <div class="sc"><span class="rt2">Jogo · objeto</span><div class="jm"><b>Proposta:</b> qual objeto você guardou sem saber por quê? Um bilhete, um ticket, uma pedra, um clipe. Ele está em algum lugar da sua casa agora. Tire uma foto. Mande.</div></div>
-    <div class="sc"><span class="rt2">Conexões</span><div class="cx"><span data-ir="14">trabalho</span><span data-ir="22">apoie</span></div></div>
+    <div class="sc"><span class="rt2">Jogo · objeto</span><div class="jm"><b>Proposta:</b> qual objeto você guardou sem saber por quê? Ele está em algum lugar da sua casa agora.</div></div>
   </div></div>
 </article>
 
@@ -722,7 +672,6 @@ footer a:hover{border-color:var(--p)}
   </div>
   <div class="rd"><span>depoimento · corpo</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">Sobre este bloco</span>Placeholder. Espaço reservado para depoimento real. Se você quer contribuir, escreva. A gente edita junto. Você aprova antes de publicar.</div>
     <div class="sc"><span class="rt2">Como contribuir</span><ul><li>Grave áudio de 2 minutos</li><li>Escreva até 200 palavras</li><li>Envie para amareasartes@gmail.com · assunto "OMNIS depoimento"</li></ul></div>
     <div class="sc"><span class="rt2">Serviço</span>CVV 188 — gratuito, 24h, sigiloso.</div>
   </div></div>
@@ -743,22 +692,22 @@ footer a:hover{border-color:var(--p)}
   </div>
   <div class="rd"><span>bell hooks · amor é prática</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">Sobre</span>hooks trabalha com a formulação de M. Scott Peck: amor como "vontade de estender o eu para nutrir o próprio crescimento espiritual ou o de outra pessoa". É prática, não sentimento. Este bloco é prática concreta em 5 passos.</div>
-    <div class="sc"><span class="rt2">Jogo · prática</span><div class="jm"><b>Proposta:</b> faça os 5 passos com uma pessoa hoje. Depois conte o que aconteceu. Mande para amareasartes@gmail.com.</div></div>
+    <div class="sc"><span class="rt2">Sobre</span>hooks trabalha com a formulação de M. Scott Peck: amor como "vontade de estender o eu para nutrir o próprio crescimento espiritual ou o de outra pessoa". É prática, não sentimento.</div>
   </div></div>
 </article>
+
 <!-- 27 LINHA DO TEMPO HIV -->
 <article class="b m tm" data-c="7" data-tema="corpo">
   <span class="nm" aria-hidden="true">27</span>
   <div class="in">
-    <div class="tg"><span>hiv</span><span>memória</span><span>história</span></div>
+    <div class="tg"><span>HIV</span><span>memória</span><span>história</span></div>
     <div class="co">
       <div class="ev"><span class="an">1981</span><span>Primeiros casos notificados nos EUA. Imprensa chama de "câncer gay".</span></div>
-      <div class="ev"><span class="an">1982</span><span>Primeiro caso de aids registrado no Brasil, em São Paulo. O silêncio oficial começa.</span></div>
+      <div class="ev"><span class="an">1982</span><span>Primeiro caso de aids registrado no Brasil, em São Paulo.</span></div>
       <div class="ev"><span class="an">1983</span><span>Primeira notificação de infecção pelo HIV em mulher no Brasil.</span></div>
       <div class="ev"><span class="an">1990</span><span>Morre Cazuza em 7 de julho. Uma geração inteira desaparece.</span></div>
       <div class="ev"><span class="an">1996</span><span>Chega o coquetel. HIV deixa de ser sentença de morte, mas o estigma fica.</span></div>
-      <div class="ev"><span class="an">2016</span><span>I=I ganha força como consenso científico e campanha pública, após evidências acumuladas.</span></div>
+      <div class="ev"><span class="an">2016</span><span>I=I ganha força como consenso científico e campanha pública.</span></div>
       <div class="ev"><span class="an">2018</span><span>PrEP oral chega ao SUS.</span></div>
     </div>
   </div>
@@ -766,13 +715,10 @@ footer a:hover{border-color:var(--p)}
   <div class="pn"><div class="cp">
     <div class="sc"><span class="rt2">Fontes</span><ul>
       <li><a href="https://www.ioc.fiocruz.br/aids20anos/linhadotempo.html" target="_blank" rel="noopener noreferrer">Fiocruz — Linha do tempo da aids</a></li>
-      <li><a href="https://www.gov.br/saude" target="_blank" rel="noopener noreferrer">Ministério da Saúde — Boletim 2025</a></li>
-      <li><a href="https://unaids.org.br" target="_blank" rel="noopener noreferrer">UNAIDS Brasil</a></li>
+      <li><a href="https://www.gov.br/saude" target="_blank" rel="noopener noreferrer">Ministério da Saúde</a></li>
     </ul></div>
-    <div class="sc"><span class="rt2">Jogo · nome</span><div class="jm"><b>Proposta:</b> quem você perdeu para a aids? Um nome. Uma memória. Mande. Entra na próxima versão como memorial.</div></div>
   </div></div>
 </article>
-
 <!-- 28 RESPIRAR -->
 <article class="b rt" data-c="2" data-tema="corpo">
   <span class="nm" aria-hidden="true">28</span>
@@ -796,7 +742,7 @@ footer a:hover{border-color:var(--p)}
   <div class="rd"><span>fala ouvida</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
     <div class="sc"><span class="rt2">Sobre</span>Uma fala ouvida no ônibus. Não é citação. É o que ficou na memória. Toda cidade tem frases assim.</div>
-    <div class="sc"><span class="rt2">Jogo · ouvir</span><div class="jm"><b>Proposta:</b> qual foi a última frase que você ouviu na rua e não esqueceu? Escreva. Guarde. Mande.</div></div>
+    <div class="sc"><span class="rt2">Jogo · ouvir</span><div class="jm"><b>Proposta:</b> qual foi a última frase que você ouviu na rua e não esqueceu? Escreva. Guarde.</div></div>
   </div></div>
 </article>
 
@@ -827,19 +773,14 @@ footer a:hover{border-color:var(--p)}
 <article class="b dd" data-c="2" data-tema="corpo">
   <span class="nm" aria-hidden="true">32</span>
   <div class="in">
-    <div class="tg"><span>saúde mental</span><span class="v">dado verificado</span></div>
-    <div class="co"><div class="n" style="font-size:42px">4,27×</div><div class="d">é a chance maior de tentativa de suicídio entre pessoas LGBTQIA+ comparadas a pessoas cis-heterossexuais, segundo meta-análise internacional.</div></div>
+    <div class="tg"><span>saúde mental</span><span>LGBTQIA+</span><span class="v">dado verificado</span></div>
+    <div class="co"><div class="n" style="font-size:42px">4,27×</div><div class="d">é a razão de chances de tentativa de suicídio entre pessoas LGBTQIA+ comparadas a pessoas cis-heterossexuais. Odds ratio = 4,27, segundo meta-análise internacional.</div></div>
   </div>
-  <div class="rd"><span>meta-análise · SciELO/Saúde Debate 2025</span><span class="ap">aprofundar</span></div>
+  <div class="rd"><span>International Journal of Social Psychiatry · 2025</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">Fontes</span><ul>
-      <li>Meta-análise com 64 estudos: OR = 4,27 para tentativas de suicídio entre pessoas LGBTQIA+</li>
-      <li>Alta heterogeneidade entre estudos (I² = 99%) — o número varia conforme população e contexto. Não se restringe a jovens.</li>
-      <li>CVV — prevenção</li>
-      <li>CAPS — cuidado pelo SUS</li>
-    </ul></div>
+    <div class="sc"><span class="rt2">Meta-análise (2025)</span>64 estudos incluídos. Risco de tentativa de suicídio 4,27 vezes maior entre pessoas LGBTQIA+ em comparação com heterossexuais/cisgênero (IC 95%: 3,74–4,89; I² = 99%). Fonte: International Journal of Social Psychiatry, SAGE, 2025.</div>
     <div class="sc"><span class="rt2">Se você está pensando em se matar</span>Ligue 188. Gratuito. 24h. Anônimo. Ou vá a um CAPS. Ou chame alguém.</div>
-    <div class="sc"><span class="rt2">Jogo · cuidado</span><div class="jm"><b>Proposta:</b> mande uma mensagem para alguém hoje. Sem motivo. Só "pensei em você". Pode salvar.</div></div>
+    <div class="sc"><span class="rt2">Jogo · cuidado</span><div class="jm"><b>Proposta:</b> mande uma mensagem para alguém hoje. Sem motivo. Só "pensei em você".</div></div>
   </div></div>
 </article>
 
@@ -902,64 +843,51 @@ footer a:hover{border-color:var(--p)}
   </div></div>
 </article>
 
-<!-- 37 TRABALHO INTERMITENTE -->
-<article class="b dd" data-c="4" data-tema="sociedade">
+<!-- 37 HISTÓRIA ORAL HIV -->
+<article class="b m tx" data-c="7" data-tema="corpo">
   <span class="nm" aria-hidden="true">37</span>
   <div class="in">
-    <div class="tg"><span>trabalho</span><span>precarização</span><span class="v">dado verificado</span></div>
-    <div class="co">
-      <div class="n">49,5%</div>
-      <div class="d">dos contratos de trabalho intermitente ativos no Brasil em 2025 não geraram nenhuma hora de trabalho nem renda ao longo de todo o ano.</div>
-    </div>
+    <div class="tg"><span>HIV</span><span>história oral</span><span>memória</span></div>
+    <div class="co"><div class="ti">Quem se lembra do começo?</div><div class="cp">Há histórias da epidemia que estão nos livros. Outras estão em caixas de fotografias, cartas, prontuários, conversas que nunca aconteceram. Quem cuidou? Quem teve medo? Quem ficou? Quem não conseguiu ficar?</div></div>
   </div>
-  <div class="rd"><span>DIEESE · Emprego em Pauta nº 33</span><span class="ap">aprofundar</span></div>
+  <div class="rd"><span>história oral</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">Contexto</span>Estudo do DIEESE (setembro de 2026) aponta que o contrato de zero hora não entregou a promessa de geração em massa de postos formais. Nos meses em que houve convocação, 68% dos trabalhadores receberam abaixo de um salário mínimo. A média salarial ponderada ao longo da vigência do contrato foi de R$ 703. Um em cada dois contratos ficou parado.</div>
-    <div class="sc"><span class="rt2">PEC 12/2026</span>Uma proposta de emenda constitucional em tramitação tenta recriar e ampliar a modalidade, na contramão das demandas de sindicatos e pesquisadores.</div>
-    <div class="sc"><span class="rt2">Fonte primária</span><ul>
-      <li><a href="https://www.dieese.org.br" target="_blank" rel="noopener noreferrer">DIEESE — Boletim Emprego em Pauta nº 33 (2026)</a></li>
-      <li>MTE — Relação Anual de Informações Sociais (RAIS 2025)</li>
+    <div class="sc"><span class="rt2">Jogo · arquivo oral</span><div class="jm"><b>Proposta:</b> convide alguém que viveu os primeiros anos da epidemia a contar uma lembrança, se desejar. Pergunte o que gostaria que as gerações atuais soubessem. Registre somente com consentimento explícito.</div></div>
+    <div class="sc"><span class="rt2">Para ler</span><ul>
+      <li><a href="https://www.gov.br/saude" target="_blank" rel="noopener noreferrer">Ministério da Saúde — Boletins epidemiológicos</a></li>
+      <li>Brasil. Ministério da Saúde / Unesco. <em>Histórias da aids no Brasil</em> — publicação oficial em três volumes</li>
     </ul></div>
-    <div class="sc"><span class="rt2">Conexões</span><div class="cx"><span data-ir="38">trabalho PcD</span><span data-ir="06">algoritmo</span></div></div>
   </div></div>
 </article>
 
-<!-- 38 PCD NO MERCADO FORMAL -->
-<article class="b dd" data-c="3" data-tema="sociedade">
+<!-- 38 MEMÓRIA HIV -->
+<article class="b tx" data-c="7" data-tema="corpo">
   <span class="nm" aria-hidden="true">38</span>
   <div class="in">
-    <div class="tg"><span>inclusão</span><span>PcD</span><span class="v">dado verificado</span></div>
-    <div class="co">
-      <div class="n" style="font-size:38px">1,27%</div>
-      <div class="d">dos vínculos formais de emprego no Brasil em 2025 eram ocupados por Pessoas com Deficiência (759 mil postos). Apenas 1 em cada 29 ocupava cargo de direção.</div>
-    </div>
+    <div class="tg"><span>HIV</span><span>memória</span></div>
+    <div class="co"><div class="ti">Os nomes não são números</div><div class="cp">Uma estatística mostra a dimensão de uma epidemia. Não conta quem aquela pessoa era. Havia quem cozinhasse para os amigos, quem dançasse até o amanhecer, quem escrevesse cartas, colecionasse discos, se apaixonasse, brigasse, fizesse planos.</div></div>
   </div>
-  <div class="rd"><span>MTE / RAIS · DIEESE 2025</span><span class="ap">aprofundar</span></div>
+  <div class="rd"><span>memória · hiv</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">Análise territorial</span>Maior participação proporcional no Distrito Federal (1,83%), São Paulo (1,55%) e Paraíba (1,38%). Menor indicador no Tocantins (0,64%). Distribuição por tipo: Física (41%), Visual (18%), Auditiva (17%), Intelectual (13%), Reabilitação (8%) e Múltipla (4%).</div>
-    <div class="sc"><span class="rt2">Fonte primária</span><ul>
-      <li><a href="https://www.gov.br/trabalho-e-emprego" target="_blank" rel="noopener noreferrer">MTE / RAIS — Infográfico PcD 2025</a></li>
-    </ul></div>
-    <div class="sc"><span class="rt2">Jogo · sobre a mesa</span><div class="jm"><b>Proposta:</b> em uma reunião de trabalho, conte quantas PcD estão presentes e quantas ocupam posições de decisão. Anote sem julgar.</div></div>
+    <div class="sc"><span class="rt2">Sobre</span>Texto reflexivo, sem dados verificáveis. Cita apenas o fato histórico de que a epidemia de aids vitimou uma geração inteira.</div>
+    <div class="sc"><span class="rt2">Jogo · inventário de memória</span><div class="jm"><b>Proposta:</b> escolha um objeto, foto, música ou lembrança. Escreva uma legenda que comece por "Antes de ser lembrada por isso, essa pessoa…". Só publique com autorização.</div></div>
   </div></div>
 </article>
 
-<!-- 39 NEGOCIAÇÃO COLETIVA E VIOLÊNCIA DE GÊNERO -->
-<article class="b sv" data-c="2" data-tema="sociedade">
+<!-- 39 PREVENÇÃO -->
+<article class="b sv" data-c="7" data-tema="corpo">
   <span class="nm" aria-hidden="true">39</span>
   <div class="in">
-    <div class="tg" style="color:rgba(242,236,224,.85)"><span>direitos</span><span>mulheres</span><span class="v">serviço verificado</span></div>
-    <div class="co">
-      <div class="ch">Proteção em acordo coletivo</div>
-      <div class="if">5,4% das negociações trabalhistas em 2025 pactuaram cláusulas diretas de combate à violência doméstica e ao assédio no trabalho. As cláusulas incluem licença remunerada de 5 a 18 dias, estabilidade provisória e sigilo.</div>
-    </div>
+    <div class="tg" style="color:rgba(242,236,224,.85)"><span>HIV</span><span>prevenção</span><span>serviço</span></div>
+    <div class="co"><div class="ch">Prevenir não é uma única coisa.</div><div class="if">Preservativos · PrEP · PEP · testagem · tratamento · informação · acesso<br><br>PrEP: antes da exposição<br>PEP: começar o quanto antes, em até 72 horas após possível exposição</div></div>
   </div>
-  <div class="rd"><span>DIEESE · Boletim Boas Práticas nº 19</span><span class="ap">aprofundar</span></div>
+  <div class="rd"><span>prevenção combinada</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">Base legal</span>Protocolo "Não é Não" (Lei 14.786/2023); Convenções 111 e 190 da OIT; Lei Maria da Penha (Lei 11.340/2006, art. 9º).</div>
-    <div class="sc"><span class="rt2">Fonte primária</span><ul>
-      <li><a href="https://www.dieese.org.br" target="_blank" rel="noopener noreferrer">DIEESE — Boletim Boas Práticas nº 19</a></li>
-      <li>Sistema Mediador do MTE — Mapa das negociações coletivas</li>
+    <div class="sc"><span class="rt2">Jogo · mapa de acesso</span><div class="jm"><b>Proposta:</b> descubra onde fazer teste de HIV e onde buscar PrEP ou PEP na sua cidade. Registre serviços, horários e contatos confirmados. Produza um guia que outra pessoa consiga usar.</div></div>
+    <div class="sc"><span class="rt2">Onde buscar</span><ul>
+      <li><a href="https://imprep.org" target="_blank" rel="noopener noreferrer">imprep.org</a> — mapa nacional</li>
+      <li>SAE e CTA — consulte serviços locais</li>
+      <li>Em possível exposição, procure imediatamente um serviço de saúde para avaliação de PEP</li>
     </ul></div>
   </div></div>
 </article>
@@ -968,7 +896,7 @@ footer a:hover{border-color:var(--p)}
 <article class="b fr" data-c="7" data-tema="corpo">
   <span class="nm" aria-hidden="true">40</span>
   <div class="in">
-    <div class="tg"><span>hiv</span><span>ciência</span><span class="v">dado verificado</span></div>
+    <div class="tg"><span>HIV</span><span>ciência</span><span class="v">dado verificado</span></div>
     <div class="co"><div class="ff">indetectável é<br>informação,<br>não segredo.</div><div class="au">I=I · evidências acumuladas desde 2016</div></div>
   </div>
   <div class="rd"><span>ciência · I=I</span><span class="ap">aprofundar</span></div>
@@ -982,7 +910,7 @@ footer a:hover{border-color:var(--p)}
 <article class="b m tx" data-c="7" data-tema="corpo">
   <span class="nm" aria-hidden="true">41</span>
   <div class="in">
-    <div class="tg"><span>hiv</span><span>ativismo</span></div>
+    <div class="tg"><span>HIV</span><span>ativismo</span></div>
     <div class="co"><div class="ti">O cuidado também foi uma luta política.</div><div class="cp">Medicamentos, pesquisas, diagnóstico e políticas públicas não avançaram por inércia. Pessoas vivendo com HIV, familiares, profissionais e movimentos contestaram o abandono, denunciaram discriminação, pressionaram instituições. Cuidar também é organizar, reivindicar, exigir respostas.</div></div>
   </div>
   <div class="rd"><span>ativismo · hiv</span><span class="ap">aprofundar</span></div>
@@ -995,7 +923,7 @@ footer a:hover{border-color:var(--p)}
 <article class="b pg" data-c="7" data-tema="corpo">
   <span class="nm" aria-hidden="true">42</span>
   <div class="in">
-    <div class="tg"><span>hiv</span><span>comunidade</span><span>intimidade</span></div>
+    <div class="tg"><span>HIV</span><span>comunidade</span><span>intimidade</span></div>
     <div class="co"><div class="pp">Ninguém deveria<br>precisar contar tudo.</div></div>
   </div>
   <div class="rd"><span>comunidade · hiv</span><span class="ap">aprofundar</span></div>
@@ -1009,7 +937,7 @@ footer a:hover{border-color:var(--p)}
 <article class="b tx" data-c="7" data-tema="corpo">
   <span class="nm" aria-hidden="true">43</span>
   <div class="in">
-    <div class="tg"><span>hiv</span><span>futuro</span></div>
+    <div class="tg"><span>HIV</span><span>futuro</span></div>
     <div class="co"><div class="ti">O futuro não é uma promessa publicitária.</div><div class="cp">A pesquisa continua. Medicamentos de ação prolongada, remissão, cura: cada avanço tem limites, condições de acesso e etapas de investigação. Esperança não exige anunciar como resolvido o que ainda está em estudo.</div></div>
   </div>
   <div class="rd"><span>futuro · hiv</span><span class="ap">aprofundar</span></div>
@@ -1022,7 +950,7 @@ footer a:hover{border-color:var(--p)}
 <article class="b m tx" data-c="7" data-tema="corpo">
   <span class="nm" aria-hidden="true">44</span>
   <div class="in">
-    <div class="tg"><span>hiv</span><span>presente</span></div>
+    <div class="tg"><span>HIV</span><span>presente</span></div>
     <div class="co"><div class="ti">O que ainda precisa mudar?</div><div class="cp">Há conhecimento científico, ferramentas de prevenção e tratamentos eficazes. Ainda assim, a informação não chega a todo mundo, os serviços não são igualmente acessíveis, o estigma continua interferindo. O desafio não termina quando uma informação correta é publicada.</div></div>
   </div>
   <div class="rd"><span>presente · hiv</span><span class="ap">aprofundar</span></div>
@@ -1062,17 +990,17 @@ footer a:hover{border-color:var(--p)}
   </div></div>
 </article>
 
-<!-- 47 CARTAZ IRONIA -->
+<!-- 47 CARTAZ MANIFESTO -->
 <article class="b pst m" data-c="3" data-tema="sociedade">
   <span class="nm" aria-hidden="true">47</span>
   <div class="in">
     <div class="pt">Não há neutralidade na omissão.</div>
     <div class="sb">A ausência de dados públicos oficiais não é falha técnica. É escolha política de governabilidade.</div>
-    <div class="ft">manifesto omnis · v4.4</div>
+    <div class="ft">manifesto omnis · v4.7.1</div>
   </div>
   <div class="rd"><span>editorial</span><span class="ap">ler manifesto</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">Posicionamento</span>Produzir informação independente, catalogar a memória e expor indicadores de precarização é compromisso central do OMNIS. Quando o Estado se omite na geração de estatísticas, a sociedade civil assume a trincheira epistêmica.</div>
+    <div class="sc"><span class="rt2">Sobre</span>Este bloco é um manifesto editorial. A afirmação "escolha política de governabilidade" é posição do OMNIS, não dado verificável. Manifestos não citam fonte — assinam. Assinado: Mar, curadoria.</div>
   </div></div>
 </article>
 
@@ -1095,14 +1023,15 @@ footer a:hover{border-color:var(--p)}
   <div class="in">
     <div class="tg" style="color:rgba(242,236,224,.85)"><span>meta-humor</span><span>revisão</span></div>
     <div class="co">
-      <div class="p1">"O que não se nomeia não existe no orçamento. O que não se mede não gera política pública."</div>
-      <div class="pr">ritmo e resistência · 2026</div>
-      <div class="pr">registro independente</div>
+      <div class="p1">"Fiz uma piada tão cuidadosamente revisada que, no final, ela só dizia: precisamos conversar."</div>
+      <div class="pr">Parecer 1 · falta contexto</div>
+      <div class="pr">Parecer 2 · o contexto é a piada</div>
+      <div class="pr">Parecer 3 · aprovada, desde que não circule</div>
     </div>
   </div>
   <div class="rd"><span>nota editorial</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
-    <div class="sc"><span class="rt2">Sobre</span>O medo de errar, a burocracia da linguagem, a impossibilidade de comunicação sem contexto. Texto estruturado sob a cadência do ritmo 8-point do sistema de design OMNIS, aplicado como divisória de ritmo visual no feed.</div>
+    <div class="sc"><span class="rt2">Sobre</span>O medo de errar, a burocracia da linguagem, a impossibilidade de comunicação sem contexto. Texto próprio do OMNIS. Não é citação.</div>
   </div></div>
 </article>
 
@@ -1119,6 +1048,7 @@ footer a:hover{border-color:var(--p)}
     <div class="sc"><span class="rt2">Sobre</span>Instituições que administram registros com mais eficiência do que resolvem problemas.</div>
   </div></div>
 </article>
+
 <!-- 51 PROTÓTIPO NOME -->
 <article class="b m dp" data-c="1" data-tema="identidade">
   <span class="nm" aria-hidden="true">51</span>
@@ -1173,7 +1103,7 @@ footer a:hover{border-color:var(--p)}
 <article class="b m dp" data-c="7" data-tema="corpo">
   <span class="nm" aria-hidden="true">54</span>
   <div class="in">
-    <div class="tg"><span>hiv</span><span>intimidade</span><span class="i">protótipo ficcional</span></div>
+    <div class="tg"><span>HIV</span><span>intimidade</span><span class="i">protótipo ficcional</span></div>
     <div class="co">
       <div class="vz">"Eu achava que conhecer alguém significava contar tudo de uma vez. Como se a intimidade fosse uma prova e eu precisasse entregar todos os documentos antes de entrar. Com o tempo, aprendi que confiança também é construída. Eu não preciso transformar minha vida inteira em uma apresentação para merecer afeto."</div>
       <div class="qm">PROTÓTIPO FICCIONAL · NÃO É RELATO REAL</div>
@@ -1182,7 +1112,7 @@ footer a:hover{border-color:var(--p)}
   <div class="rd"><span>hiv · intimidade</span><span class="ap">aprofundar</span></div>
   <div class="pn"><div class="cp">
     <div class="sc"><span class="rt2">Pergunta editorial</span>Como construir relações em que informação, privacidade e responsabilidade possam coexistir?</div>
-    <div class="sc"><span class="rt2">Substituição</span>A substituir por contribuição real de pessoa vivendo com HIV, revisada com a autora. Não presumir experiência universal.</div>
+    <div class="sc"><span class="rt2">Substituição</span>A substituir por contribuição real de pessoa vivendo com HIV, revisada com a autora.</div>
   </div></div>
 </article>
 
@@ -1306,7 +1236,388 @@ footer a:hover{border-color:var(--p)}
     <div class="sc"><span class="rt2">Regra</span>Ninguém precisa revelar dados pessoais. A circulação pública depende da concordância das pessoas participantes.</div>
   </div></div>
 </article>
+<!-- 60 ELAS VIVEM -->
+<article class="b dd" data-c="4" data-tema="sociedade">
+  <span class="nm" aria-hidden="true">60</span>
+  <div class="in">
+    <div class="tg"><span>gênero</span><span>violência</span><span class="v">dado verificado</span></div>
+    <div class="co"><div class="n">5.358</div><div class="d">eventos de violência contra mulheres monitorados em 2025 nos 9 estados analisados pela Rede de Observatórios da Segurança. Aumento de 9% em relação a 2024.</div></div>
+  </div>
+  <div class="rd"><span>CESeC · Elas Vivem 2026</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Destaques</span>546 feminicídios consumados em 2025. 1.798 tentativas de feminicídio ou agressões físicas. Violência sexual cresceu 59,6%: de 602 para 961 casos. 56,5% das vítimas de violência sexual tinham até 17 anos. 56,1% das violências foram cometidas por parceiros, ex-parceiros ou familiares.</div>
+    <div class="sc"><span class="rt2">Desigualdades territoriais</span>Amazonas: 78,4% dos casos de violência sexual vitimaram crianças e adolescentes. São Paulo: maior número absoluto (1.144 eventos, 173 feminicídios). Pará: maior aumento percentual (76%). Maranhão: 91,7% dos feminicídios sem registro de cor/raça.</div>
+    <div class="sc"><span class="rt2">Fonte primária</span><ul>
+      <li><a href="https://cesecseguranca.com.br/boletim/elas-vivem-a-urgencia-da-vida/" target="_blank" rel="noopener noreferrer">CESeC — Elas Vivem: a urgência da vida (2026)</a></li>
+      <li>Rede de Observatórios da Segurança — <a href="https://observatorioseguranca.com.br/" target="_blank" rel="noopener noreferrer">observatorioseguranca.com.br</a></li>
+    </ul></div>
+    <div class="sc"><span class="rt2">Jogo · 5 nomes</span><div class="jm"><b>Proposta:</b> escreva cinco nomes de mulheres que você ama. Ao lado de cada nome, escreva uma coisa concreta que você pode fazer para que ela esteja segura esta semana.</div></div>
+  </div></div>
+</article>
 
+<!-- 61 REFÚGIO EM NÚMEROS -->
+<article class="b dd" data-c="5" data-tema="territorio">
+  <span class="nm" aria-hidden="true">61</span>
+  <div class="in">
+    <div class="tg"><span>migração</span><span>refúgio</span><span class="v">dado verificado</span></div>
+    <div class="co"><div class="n" style="font-size:38px">75.599</div><div class="d">novas solicitações de refúgio no Brasil em 2025. Aumento de 10,9% em relação a 2024. Cubanos superaram venezuelanos pela primeira vez.</div></div>
+  </div>
+  <div class="rd"><span>OBMigra / MJSP · Refúgio em Números 2026</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Quem chega</span>1º lugar: Cuba — 41.919 pedidos (55,4% do total), alta de 88,1% em relação a 2024. 2º lugar: Venezuela — 21.233 pedidos (28,1%), queda de 21,8%. 3º: Colômbia (1.432), Angola (1.253), Marrocos (888).</div>
+    <div class="sc"><span class="rt2">Decisões em 2025</span>50.568 processos decididos. 9.162 pessoas reconhecidas como refugiadas. 25.538 extinções (por autorização de residência, desistência etc.). 15.626 arquivamentos. A soma das categorias listadas é 50.326; a diferença de 242 corresponde a outras categorias administrativas não detalhadas no relatório.</div>
+    <div class="sc"><span class="rt2">Fonte primária</span><ul>
+      <li><a href="https://portaldeimigracao.mj.gov.br/" target="_blank" rel="noopener noreferrer">OBMigra / MJSP — Refúgio em Números 2026</a></li>
+      <li><a href="https://www.acnur.org/portugues/" target="_blank" rel="noopener noreferrer">ACNUR Brasil</a></li>
+    </ul></div>
+    <div class="sc"><span class="rt2">Jogo · uma linha</span><div class="jm"><b>Proposta:</b> escreva em uma linha o que você levaria consigo se precisasse sair do país amanhã. Sem justificar. Só a linha.</div></div>
+  </div></div>
+</article>
+
+<!-- 62 JOGOS E APOSTAS -->
+<article class="b dd" data-c="7" data-tema="corpo">
+  <span class="nm" aria-hidden="true">62</span>
+  <div class="in">
+    <div class="tg"><span>saúde mental</span><span>apostas</span><span class="i">dado em apuração</span></div>
+    <div class="co"><div class="n" style="font-size:38px">25,9%</div><div class="d">da população brasileira já apostou ou jogou alguma vez na vida, segundo a III LENAD. 4,4% apresentam comportamento de risco alto — o denominador precisa ser conferido no relatório original.</div></div>
+  </div>
+  <div class="rd"><span>DESMAD/OPAS/MS · 2025</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Comportamento</span>61,4% não apresentaram comportamento de risco. 19,4% baixo risco. 14,8% risco moderado. 4,4% risco alto. Modalidades mais usadas: loterias (71,3%), sites de apostas on-line (32,1%), jogo do bicho (28,9%).</div>
+    <div class="sc"><span class="rt2">Saúde pública</span>Aumento dos atendimentos na RAPS por Transtorno do Jogo (CID F63) desde a legalização das apostas em 2018. Projeção de crescimento de 104% até 2028. Mais de 6.000 pessoas atendidas entre janeiro de 2018 e maio de 2025, principalmente homens jovens.</div>
+    <div class="sc"><span class="rt2">Ferramentas</span>Autoteste de saúde mental vinculado ao gov.br. Plataforma centralizada de autoexclusão integrada às plataformas de apostas. Telessaúde pelo programa "Tem Especialistas".</div>
+    <div class="sc"><span class="rt2">Se você precisa de ajuda</span><ul><li>CVV 188 — gratuito, 24h, sigiloso</li><li>CAPS AD — Centros de Atenção Psicossocial Álcool e Drogas</li><li>Autoteste de saúde mental no app Meu SUS Digital</li></ul></div>
+    <div class="sc"><span class="rt2">Fonte primária</span><ul>
+      <li><a href="https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes" target="_blank" rel="noopener noreferrer">Ministério da Saúde — Relatório Executivo Jogos e Apostas (2025)</a></li>
+    </ul></div>
+  </div></div>
+</article>
+
+<!-- 63 POVOS WARAO -->
+<article class="b m tx" data-c="6" data-tema="territorio">
+  <span class="nm" aria-hidden="true">63</span>
+  <div class="in">
+    <div class="tg"><span>indígenas</span><span>refúgio</span><span>memória</span><span class="v">dado verificado</span></div>
+    <div class="co"><div class="ti">Os Warao no Brasil</div><div class="cp">Mais de 7 mil indígenas venezuelanos da etnia Warao vivem hoje no Brasil. Chegaram em deslocamentos iniciados em 2014 e intensificados a partir de 2016. Estão em todas as unidades da federação. A maioria é criança e adolescente.</div></div>
+  </div>
+  <div class="rd"><span>ACNUR · 2024</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Desafios</span>Documentação, abrigamento, educação multilíngue, saúde intercultural. Em 2020, os deslocamentos já alcançavam pelo menos 75 cidades nas cinco regiões do Brasil. A primeira inclusão de etnia na certidão de nascimento foi concretizada em 2024.</div>
+    <div class="sc"><span class="rt2">Fonte primária</span><ul>
+      <li><a href="https://www.acnur.org/portugues/" target="_blank" rel="noopener noreferrer">ACNUR — Os Warao no Brasil (2024)</a></li>
+    </ul></div>
+  </div></div>
+</article>
+
+<!-- 64 SAÚDE MENTAL HUMANITÁRIA -->
+<article class="b m tx" data-c="2" data-tema="corpo">
+  <span class="nm" aria-hidden="true">64</span>
+  <div class="in">
+    <div class="tg"><span>cuidado</span><span>trabalho</span></div>
+    <div class="co"><div class="ti">Cuidar de quem cuida</div><div class="cp">O ACNUR e a UFPR publicaram em 2026 um manual sobre saúde mental de trabalhadores humanitários. O documento trata de estresse, trauma, burnout, fadiga por compaixão e cultura organizacional. Diz que o cuidado com quem cuida não é medida secundária — é elemento da prática ética.</div></div>
+  </div>
+  <div class="rd"><span>ACNUR / UFPR · 2026</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Sinais de alerta</span>Tristeza persistente, ansiedade, irritabilidade, dificuldade de concentração, isolamento social, alterações no sono ou apetite, aumento no consumo de álcool ou outras substâncias.</div>
+    <div class="sc"><span class="rt2">Estratégias</span>Supervisão técnica regular, espaços de troca em equipe, definição clara de horários e limites, divisão efetiva de tarefas, acompanhamento psicológico, pausas reais, práticas corporais ou respiratórias.</div>
+    <div class="sc"><span class="rt2">Rede de apoio no Brasil</span>SUS (RAPS: CAPS, CAPS AD, CAPSi, UBS, UPA, Consultórios na Rua, NASF), SUAS (CRAS, CREAS), Conselhos Tutelares, Defensorias Públicas.</div>
+    <div class="sc"><span class="rt2">Se você precisa de ajuda</span>CVV 188 — gratuito, 24h, sigiloso. Ou vá a um CAPS mais próximo.</div>
+    <div class="sc"><span class="rt2">Fonte primária</span><ul>
+      <li><a href="https://www.acnur.org/portugues/" target="_blank" rel="noopener noreferrer">ACNUR / UFPR — Manual de Saúde Mental e Apoio Psicossocial (2026)</a></li>
+    </ul></div>
+  </div></div>
+</article>
+
+<!-- 65 TIRINHA RH -->
+<article class="b m tr al" data-c="3" data-tema="sociedade">
+  <span class="nm" aria-hidden="true">65</span>
+  <div class="in">
+    <div class="tg"><span>tirinha</span><span>trabalho</span><span>humor</span></div>
+    <div class="co"><div class="qd">
+      <div class="q"><span class="nn">01</span>RH: "Precisamos falar sobre sua saúde mental."</div>
+      <div class="q"><span class="nn">02</span>Eu: "Maravilha. Vamos falar."</div>
+      <div class="q"><span class="nn">03</span>RH: "Ótimo. Mas primeiro: você sabe que essa conversa fica no seu prontuário, né?"</div>
+      <div class="q"><span class="nn">04</span>Eu: "Então eu não tenho saúde mental. Nem conversa."</div>
+    </div></div>
+  </div>
+  <div class="rd"><span>tirinha · trabalho</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Sobre</span>Protótipo ficcional. Alvo: a contradição entre o discurso corporativo de cuidado e o medo real de represália. Desenhar em 4 quadros.</div>
+  </div></div>
+</article>
+
+<!-- 66 CHARGE SISTEMA -->
+<article class="b im" data-c="4" data-tema="sociedade">
+  <span class="nm" aria-hidden="true">66</span>
+  <div class="in">
+    <div class="tg" style="padding:0 20px;color:var(--c)"><span>charge</span><span>instituições</span><span>humor</span></div>
+    <div class="ii" style="height:160px">[ ilustração: uma fila enorme de pessoas. Na ponta, uma placa: "atendimento". Atrás do guichê, uma máquina com um botão só: "encaminhar para outro guichê". ]</div>
+    <div class="le">O sistema de encaminhamentos.<span class="cr">charge · a desenhar</span></div>
+  </div>
+  <div class="rd"><span>charge · burocracia</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Sobre</span>Quando a instituição só sabe fazer uma coisa, ela só entrega essa coisa. A solução real é raramente um novo encaminhamento.</div>
+  </div></div>
+</article>
+
+<!-- 67 CARTAZ TRABALHO -->
+<article class="b pst m" data-c="3" data-tema="sociedade">
+  <span class="nm" aria-hidden="true">67</span>
+  <div class="in">
+    <div class="pt">Trabalho não é família.</div>
+    <div class="sb">Ninguém deve gratidão a quem paga o salário. Nem colega é irmão. Nem chefe é pai.</div>
+    <div class="ft">omnis · v4.7.1</div>
+  </div>
+  <div class="rd"><span>cartaz · trabalho</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Sobre</span>A romantização da empresa como segunda casa é uma das estratégias mais eficazes de extração de trabalho não remunerado. Este cartaz pode ser colado em paredes.</div>
+  </div></div>
+</article>
+
+<!-- 68 PERGUNTA CANSAÇO -->
+<article class="b pg" data-c="6" data-tema="identidade">
+  <span class="nm" aria-hidden="true">68</span>
+  <div class="in">
+    <div class="tg"><span>corpo</span><span>pergunta</span></div>
+    <div class="co"><div class="pp">O que você deixou<br>de fazer por cansaço?</div></div>
+  </div>
+  <div class="rd"><span>pergunta aberta</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Sobre a pergunta</span>Cansaço não é preguiça. É sintoma. Às vezes é sintoma de trabalho demais, outras de vida de menos. Vale saber distinguir.</div>
+    <div class="sc"><span class="rt2">Jogo · a lista</span><div class="jm"><b>Proposta:</b> liste três coisas que você deixou de fazer por cansaço nos últimos seis meses. Ao lado de cada uma, escreva o que você faria se tivesse energia sobrando.</div></div>
+  </div></div>
+</article>
+
+<!-- 69 MOSAICO -->
+<article class="b m im" data-c="8" data-tema="cultura">
+  <span class="nm" aria-hidden="true">69</span>
+  <div class="in">
+    <div class="tg" style="padding:0 20px"><span>mosaico</span><span>imagem</span></div>
+    <div class="ii" style="height:200px;background:repeating-linear-gradient(45deg,#5C4800 0 8px,#3A2A1A 8px 16px,#4A0E1E 16px 24px,#1B3A4B 24px 32px);color:var(--p)">[ mosaico visual: 8 fragmentos de imagem. Nenhum texto. ]</div>
+    <div class="le">Alguns encontros precisam ser vistos, não lidos.<span class="cr">mosaico · a compor</span></div>
+  </div>
+  <div class="rd"><span>mosaico · imagem</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Sobre</span>Bloco reservado para uma composição visual com 8 fragmentos. Pode ser feita por você, por um ilustrador convidado ou gerada a partir do próprio arquivo do OMNIS.</div>
+  </div></div>
+</article>
+
+<!-- 70 SUS -->
+<article class="b m tr al" data-c="3" data-tema="sociedade">
+  <span class="nm" aria-hidden="true">70</span>
+  <div class="in">
+    <div class="tg"><span>tirinha</span><span>SUS</span><span>humor</span></div>
+    <div class="co"><div class="qd">
+      <div class="q"><span class="nn">01</span>Paciente: "Doutora, descobri o medicamento que preciso."</div>
+      <div class="q"><span class="nn">02</span>Médica: "Ótimo. Ele está disponível pelo SUS."</div>
+      <div class="q"><span class="nn">03</span>Paciente: "Aqui na minha cidade?"</div>
+      <div class="q"><span class="nn">04</span>Médica: "Não. Mas, pelo menos, você descobriu que ele existe."</div>
+    </div></div>
+  </div>
+  <div class="rd"><span>tirinha · saúde pública</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Sobre</span>Protótipo ficcional. A tirinha ironiza a distância entre a existência formal de um tratamento e seu acesso concreto. A disponibilidade pode variar conforme o medicamento, a indicação clínica, os protocolos e a rede local.</div>
+  </div></div>
+</article>
+
+<!-- 71 RACISMO ALGORÍTMICO -->
+<article class="b m tr al" data-c="3" data-tema="sociedade">
+  <span class="nm" aria-hidden="true">71</span>
+  <div class="in">
+    <div class="tg"><span>tirinha</span><span>racismo algorítmico</span><span>humor</span></div>
+    <div class="co"><div class="qd">
+      <div class="q"><span class="nn">01</span>Aplicativo: "Posicione o rosto dentro da moldura."</div>
+      <div class="q"><span class="nn">02</span>Pessoa: "Assim?"</div>
+      <div class="q"><span class="nn">03</span>Aplicativo: "Não foi possível reconhecer seu rosto. Tente novamente."</div>
+      <div class="q"><span class="nn">04</span>Pessoa: "Claro. Vou trocar de rosto. Você aceita parcelamento?"</div>
+    </div></div>
+  </div>
+  <div class="rd"><span>tirinha · tecnologia</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Nota editorial</span>Protótipo ficcional sobre racismo algorítmico. Escrito sem revisão de pessoa negra. Revisão e crédito pendentes. Uma leitura individual não representa todas as experiências negras nem substitui a apuração de casos concretos.</div>
+  </div></div>
+</article>
+
+<!-- 72 HOMOFOBIA FAMILIAR -->
+<article class="b m tr al" data-c="3" data-tema="identidade">
+  <span class="nm" aria-hidden="true">72</span>
+  <div class="in">
+    <div class="tg"><span>tirinha</span><span>família</span><span>humor</span></div>
+    <div class="co"><div class="qd">
+      <div class="q"><span class="nn">01</span>Mãe: "Por que essa mala no corredor?"</div>
+      <div class="q"><span class="nn">02</span>Adolescente: "Vou passar uns dias fora."</div>
+      <div class="q"><span class="nn">03</span>Mãe: "Mas você vai para onde?"</div>
+      <div class="q"><span class="nn">04</span>Adolescente: "Ainda não sei. Você também não sabia que eu estava indo embora."</div>
+    </div></div>
+  </div>
+  <div class="rd"><span>tirinha · família</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Sobre</span>Protótipo ficcional. A tirinha aborda a ruptura do diálogo familiar diante da rejeição da orientação sexual de uma pessoa jovem. O humor é seco e não transforma a saída de casa em solução simples: segurança, moradia e apoio material também importam.</div>
+    <div class="sc"><span class="rt2">Se você está sem ter para onde ir</span>Disque 100 · CVV 188</div>
+  </div></div>
+</article>
+
+<!-- 73 FÉ E DISSIDÊNCIA -->
+<article class="b m tr al" data-c="3" data-tema="identidade">
+  <span class="nm" aria-hidden="true">73</span>
+  <div class="in">
+    <div class="tg"><span>tirinha</span><span>fé</span><span>humor</span></div>
+    <div class="co"><div class="qd">
+      <div class="q"><span class="nn">01</span>Recepção: "Aqui todo mundo é bem-vindo."</div>
+      <div class="q"><span class="nn">02</span>Pessoa: "Que bom. Vim participar do culto."</div>
+      <div class="q"><span class="nn">03</span>Liderança: "Você poderia se retirar? Sua presença está incomodando algumas pessoas."</div>
+      <div class="q"><span class="nn">04</span>Pessoa: "Entendi. O acolhimento era por ordem de chegada ou por orientação sexual?"</div>
+    </div></div>
+  </div>
+  <div class="rd"><span>tirinha · fé e dissidência</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Sobre</span>Protótipo ficcional. O alvo é a contradição entre uma declaração genérica de acolhimento e uma prática que estabelece condições de pertencimento. A tirinha critica uma conduta institucional específica, não a fé ou as comunidades religiosas em sua totalidade.</div>
+  </div></div>
+</article>
+
+<!-- 74 TRABALHO INTERMITENTE -->
+<article class="b m tr al" data-c="3" data-tema="sociedade">
+  <span class="nm" aria-hidden="true">74</span>
+  <div class="in">
+    <div class="tg"><span>tirinha</span><span>trabalho</span><span>humor</span></div>
+    <div class="co"><div class="qd">
+      <div class="q"><span class="nn">01</span>Trabalhador: "Faz trinta dias que não recebo convocação."</div>
+      <div class="q"><span class="nn">02</span>Aplicativo: "Seu extrato está disponível!"</div>
+      <div class="q"><span class="nn">03</span>Trabalhador: "R$ 42. Isso é salário?"</div>
+      <div class="q"><span class="nn">04</span>Aplicativo: "Não. É a prova de que nosso relacionamento continua ativo."</div>
+    </div></div>
+  </div>
+  <div class="rd"><span>tirinha · trabalho precário</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Sobre</span>Protótipo ficcional. O valor de R$ 42 integra a situação imaginada, não uma estatística. A tirinha explora a assimetria de uma relação em que a disponibilidade do trabalhador é esperada, mas a oferta de trabalho e a renda permanecem incertas.</div>
+  </div></div>
+</article>
+
+<!-- 75 VELHICE LGBT -->
+<article class="b m tr al" data-c="3" data-tema="corpo">
+  <span class="nm" aria-hidden="true">75</span>
+  <div class="in">
+    <div class="tg"><span>tirinha</span><span>velhice LGBT</span><span>humor</span></div>
+    <div class="co"><div class="qd">
+      <div class="q"><span class="nn">01</span>Visitante: "Vim ver o Antônio. Sou amigo dele há quarenta anos."</div>
+      <div class="q"><span class="nn">02</span>Funcionária: "Amigo muito próximo?"</div>
+      <div class="q"><span class="nn">03</span>Visitante: "Muito. Conheço a história dele inteira."</div>
+      <div class="q"><span class="nn">04</span>Funcionária: "Certo. Vou registrar como visita de pessoa que conhece a história inteira."</div>
+    </div></div>
+  </div>
+  <div class="rd"><span>tirinha · envelhecimento</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Sobre</span>Protótipo ficcional. A tirinha questiona a necessidade de enquadrar vínculos afetivos em categorias administrativas e a suspeita dirigida a relações que não correspondem ao modelo familiar presumido.</div>
+  </div></div>
+</article>
+
+<!-- 76 MORADIA -->
+<article class="b m tr al" data-c="3" data-tema="sociedade">
+  <span class="nm" aria-hidden="true">76</span>
+  <div class="in">
+    <div class="tg"><span>tirinha</span><span>moradia</span><span>humor</span></div>
+    <div class="co"><div class="qd">
+      <div class="q"><span class="nn">01</span>Aplicativo: "Encontramos um imóvel perfeito para você."</div>
+      <div class="q"><span class="nn">02</span>Pessoa: "Cabe no meu orçamento?"</div>
+      <div class="q"><span class="nn">03</span>Aplicativo: "Seu perfil foi aprovado. Falta comprovar renda, apresentar fiador e pagar a caução."</div>
+      <div class="q"><span class="nn">04</span>Pessoa: "Entendi. O imóvel é perfeito. Eu é que não sou compatível."</div>
+    </div></div>
+  </div>
+  <div class="rd"><span>tirinha · moradia</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Sobre</span>Protótipo ficcional. A tirinha ironiza a distância entre encontrar uma moradia e conseguir acessá-la. Critérios de renda, garantias e custos iniciais podem excluir pessoas mesmo quando o imóvel parece caber no orçamento mensal.</div>
+  </div></div>
+</article>
+
+<!-- 77 SISTEMA PRISIONAL -->
+<article class="b m tr al" data-c="3" data-tema="sociedade">
+  <span class="nm" aria-hidden="true">77</span>
+  <div class="in">
+    <div class="tg"><span>tirinha</span><span>sistema prisional</span><span>humor</span></div>
+    <div class="co"><div class="qd">
+      <div class="q"><span class="nn">01</span>Entrevistadora: "O que você aprendeu durante o cumprimento da pena?"</div>
+      <div class="q"><span class="nn">02</span>Pessoa: "Que quero trabalhar, morar e recomeçar."</div>
+      <div class="q"><span class="nn">03</span>Entrevistadora: "Você tem experiência profissional recente, endereço fixo e referências?"</div>
+      <div class="q"><span class="nn">04</span>Pessoa: "Tenho. Só não sabia que ressocialização era uma vaga com tantos pré-requisitos."</div>
+    </div></div>
+  </div>
+  <div class="rd"><span>tirinha · sistema prisional</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Sobre</span>Protótipo ficcional. A tirinha questiona a contradição entre exigir reinserção social e manter barreiras que dificultam o acesso ao trabalho e à moradia após a prisão. Não resume experiências diversas de pessoas egressas nem minimiza os efeitos dos crimes sobre suas vítimas.</div>
+  </div></div>
+</article>
+
+<!-- 78 SAÚDE TRANS -->
+<article class="b m tr al" data-c="3" data-tema="corpo">
+  <span class="nm" aria-hidden="true">78</span>
+  <div class="in">
+    <div class="tg"><span>tirinha</span><span>saúde trans</span><span>humor</span></div>
+    <div class="co"><div class="qd">
+      <div class="q"><span class="nn">01</span>Recepção: "Qual nome você usa?"</div>
+      <div class="q"><span class="nn">02</span>Pessoa: "Mar. Está no meu cadastro."</div>
+      <div class="q"><span class="nn">03</span>Sistema: "Erro. O nome informado não corresponde ao registro."</div>
+      <div class="q"><span class="nn">04</span>Pessoa: "Então avise ao sistema que eu vim consultar, não pedir autorização para existir."</div>
+    </div></div>
+  </div>
+  <div class="rd"><span>tirinha · saúde trans</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Sobre</span>Protótipo ficcional. A tirinha aborda o constrangimento produzido por cadastros e rotinas que não respeitam o nome social ou os dados atualizados de uma pessoa trans. Sistemas e procedimentos variam entre serviços; a cena não descreve um estabelecimento específico. O nome "Mar" é apenas elemento ficcional e pode ser trocado por um genérico.</div>
+  </div></div>
+</article>
+
+<!-- 79 CRISE CLIMÁTICA -->
+<article class="b m tr al" data-c="3" data-tema="territorio">
+  <span class="nm" aria-hidden="true">79</span>
+  <div class="in">
+    <div class="tg"><span>tirinha</span><span>crise climática</span><span>humor</span></div>
+    <div class="co"><div class="qd">
+      <div class="q"><span class="nn">01</span>Celular: "Alerta extremo: risco de inundação na sua região."</div>
+      <div class="q"><span class="nn">02</span>Pessoa: "Qual é a rota de evacuação?"</div>
+      <div class="q"><span class="nn">03</span>Celular: "Não encontramos informações disponíveis. Deseja ver imóveis em regiões mais seguras?"</div>
+      <div class="q"><span class="nn">04</span>Pessoa: "Quero. Você parcela a mudança ou só o apocalipse?"</div>
+    </div></div>
+  </div>
+  <div class="rd"><span>tirinha · crise climática</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Sobre</span>Protótipo ficcional. A tirinha contrapõe a urgência de uma emergência climática à transformação da segurança em mercadoria. Não substitui alertas oficiais nem orientações de defesa civil. Em situações reais, consulte os canais de emergência e as rotas indicadas pelas autoridades locais.</div>
+  </div></div>
+</article>
+
+<!-- 80 DIEESE · TRABALHO INTERMITENTE -->
+<article class="b dd" data-c="3" data-tema="sociedade">
+  <span class="nm" aria-hidden="true">80</span>
+  <div class="in">
+    <div class="tg"><span>trabalho</span><span>renda</span><span class="v">dado verificado</span></div>
+    <div class="co"><div class="n" style="font-size:38px">49,5%</div><div class="d">dos vínculos intermitentes não geraram trabalho ou renda em 2025. A remuneração média foi de R$ 703 — 46% do salário mínimo. Em 68% dos meses trabalhados, a remuneração ficou abaixo de um salário mínimo.</div></div>
+  </div>
+  <div class="rd"><span>DIEESE · Emprego em Pauta nº 33 · 2026</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Contexto</span>O contrato intermitente, também conhecido como "contrato de zero hora", entrou em vigor em novembro de 2017 com a Reforma Trabalhista. O trabalhador fica à disposição do empregador, sem remuneração, aguardando ser chamado. Em 2025, 540 mil vínculos estavam ativos — 0,90% do estoque formal. A PEC 12/2026 tenta recriar a modalidade.</div>
+    <div class="sc"><span class="rt2">Fontes</span><ul>
+      <li><a href="https://abet-trabalho.org.br/dieese-emprego-em-pauta-33-trabalho-intermitente-aumenta-incerteza-e-imprevisibilidade-dos-trabalhadores/" target="_blank" rel="noopener noreferrer">DIEESE · Emprego em Pauta nº 33 (via ABET)</a></li>
+      <li><a href="https://www.dieese.org.br/notatecnica/2026/notaTec293PEC12.html" target="_blank" rel="noopener noreferrer">Nota Técnica 293 · PEC 12/2026</a></li>
+    </ul></div>
+    <div class="sc"><span class="rt2">Jogo · contas</span><div class="jm"><b>Proposta:</b> se você trabalhasse 10 horas por semana a R$ 10/hora, quanto receberia no mês? Compare com o salário mínimo. Escreva o número.</div></div>
+  </div></div>
+</article>
+
+<!-- 81 PELE ALVO -->
+<article class="b dd" data-c="3" data-tema="sociedade">
+  <span class="nm" aria-hidden="true">81</span>
+  <div class="in">
+    <div class="tg"><span>raça</span><span>violência</span><span class="v">dado verificado</span></div>
+    <div class="co"><div class="n" style="font-size:38px">86,3%</div><div class="d">das pessoas mortas por intervenção policial em 2025 eram negras. Foram 4.330 mortes nos 9 estados monitorados — o maior número da série histórica. 64,8% das vítimas tinham até 29 anos; 310 eram adolescentes de 12 a 17 anos.</div></div>
+  </div>
+  <div class="rd"><span>CESeC · Pele Alvo 2026</span><span class="ap">aprofundar</span></div>
+  <div class="pn"><div class="cp">
+    <div class="sc"><span class="rt2">Contexto</span>Em média, negros têm 4 vezes mais chance de serem mortos pela polícia do que brancos. Em Pernambuco, essa chance chega a 11 vezes; no Rio, 6 vezes. A Bahia lidera com 1.570 mortes; São Paulo (834), Rio (800), Pará (632), Ceará (200), Maranhão (142). Em 7 anos, 28.799 pessoas foram mortas por intervenções policiais nos 9 estados.</div>
+    <div class="sc"><span class="rt2">Fontes</span><ul>
+      <li><a href="https://cesecseguranca.com.br/boletim/pele-alvo-entre-racismo-e-letalidade-o-amanha/" target="_blank" rel="noopener noreferrer">CESeC · Pele Alvo 2026, 7ª edição</a></li>
+      <li><a href="https://observatorioseguranca.com.br" target="_blank" rel="noopener noreferrer">Rede de Observatórios da Segurança</a></li>
+    </ul></div>
+    <div class="sc"><span class="rt2">Jogo · contas</span><div class="jm"><b>Proposta:</b> pegue os dados de mortes por estado. Some os três primeiros. Compare com a população de cada estado. Escreva o que você observa.</div></div>
+  </div></div>
+</article>
 </main>
 
 <!-- AVISOS -->
@@ -1327,8 +1638,8 @@ footer a:hover{border-color:var(--p)}
 
 <footer>
   <div>
-    <span class="rt3">OMNIS · v4.4</span>
-    Página viva sobre vida, encontro, saúde, direitos e cultura.
+    <span class="rt3">OMNIS · v4.7.1</span>
+    Página viva sobre vida, encontro, saúde, direitos e cultura. 81 blocos numerados + 5 jogos = 86 cartões.
   </div>
   <div>
     <span class="rt3">Curadoria</span>
@@ -1345,6 +1656,7 @@ footer a:hover{border-color:var(--p)}
 </footer>
 
 <script>
+// Painéis: controles de teclado, estado ARIA e conteúdo inerte quando fechado.
 document.querySelectorAll('.b').forEach((b,i)=>{
   const p=b.querySelector('.pn'),t=b.querySelector('.rd .ap');
   if(!p||!t)return;
@@ -1355,6 +1667,8 @@ document.querySelectorAll('.b').forEach((b,i)=>{
   b.addEventListener('click',e=>{if(e.target.closest('a,.cx span,.pn'))return;tog()});
   t.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();tog()}});
 });
+
+// Conexões entre blocos.
 document.querySelectorAll('.cx span').forEach(c=>{
   c.setAttribute('role','button');c.tabIndex=0;
   c.addEventListener('click',e=>{e.stopPropagation();const ir=c.dataset.ir;
@@ -1362,6 +1676,8 @@ document.querySelectorAll('.cx span').forEach(c=>{
     if(a)a.closest('.b').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'})});
   c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();c.click()}});
 });
+
+// Filtros com estado anunciado.
 const ft=document.querySelectorAll('header .ft'),bs=document.querySelectorAll('.b');
 ft.forEach(b=>{b.setAttribute('aria-pressed',String(b.classList.contains('on')));b.addEventListener('click',()=>{
   const f=b.dataset.f;
@@ -1372,11 +1688,56 @@ ft.forEach(b=>{b.setAttribute('aria-pressed',String(b.classList.contains('on')))
     bl.classList.toggle('hd',!ok);
   });
 })});
+
+// Impressão parametrizada
 const fmt=new URLSearchParams(location.search).get('fmt');
 if(fmt){const s=document.createElement('style');s.media='print';
  s.textContent=`@page{size:${fmt==='a2'?'A2':'A5'};margin:${fmt==='a2'?'20mm':'8mm'}}`+
  (fmt==='a5'?'.fd{grid-template-columns:1fr}.b,.b.m,.b.g,.b.l{grid-column:1}':'');
  document.head.append(s)}
+
+// Compartilhamento por bloco (injetado no painel)
+const base=location.origin+location.pathname;
+const toast=m=>{let t=document.querySelector('.balerta');
+  if(!t){t=document.createElement('div');t.className='balerta';t.setAttribute('role','status');document.body.append(t)}
+  t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2200)};
+const copiar=u=>(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject())
+  .then(()=>toast('link copiado'),()=>prompt('Copie o link:',u));
+
+document.querySelectorAll('.b').forEach(b=>{
+  const nm=b.querySelector('.nm')?.textContent.trim(),cp=b.querySelector('.pn .cp');
+  if(!nm||!cp)return;
+  b.querySelectorAll('.share').forEach(s=>s.remove());
+  b.id='bloco-'+nm.toLowerCase();
+  const alvo=b.querySelector('.ti,.pp,.ff,.ch,.pa,.fa,.oj,.pt,.jt,.me');
+  const tags=[...b.querySelectorAll('.tg span')].map(x=>x.textContent).join(' · ');
+  let rot;
+  if(b.classList.contains('dd'))rot=((b.querySelector('.n')?.textContent||'')+' — '+(b.querySelector('.d')?.textContent||'')).replace(/\s+/g,' ').trim().slice(0,110);
+  else if(alvo)rot=alvo.textContent.trim().replace(/\s+/g,' ').slice(0,90);
+  else rot='OMNIS · '+(tags||'bloco '+nm);
+  if(alvo){alvo.id=b.id+'-t';alvo.setAttribute('role','heading');alvo.setAttribute('aria-level','2');b.setAttribute('aria-labelledby',alvo.id)}
+  else b.setAttribute('aria-label',rot);
+  const url=base+'#'+b.id,bar=document.createElement('div');bar.className='share';
+  const mk=(t,fn,aria)=>{const x=document.createElement('button');x.type='button';x.textContent=t;
+    x.setAttribute('aria-label',(aria||t)+' · bloco '+nm);x.onclick=fn;bar.append(x)};
+  mk('copiar link',()=>copiar(url),'Copiar link do bloco');
+  if(navigator.share)mk('compartilhar',()=>navigator.share({title:rot,url}).catch(()=>{}),'Compartilhar bloco');
+  mk('whatsapp',()=>open('https://wa.me/?text='+encodeURIComponent(rot+'\n'+url),'_blank','noopener'),'Enviar bloco por WhatsApp');
+  mk('telegram',()=>open('https://t.me/share/url?url='+encodeURIComponent(url)+'&text='+encodeURIComponent(rot),'_blank','noopener'),'Enviar bloco por Telegram');
+  mk('x',()=>open('https://twitter.com/intent/tweet?text='+encodeURIComponent(rot)+'&url='+encodeURIComponent(url),'_blank','noopener'),'Postar bloco no X');
+  cp.prepend(bar);
+});
+
+// Abrir bloco por hash
+function abrirHash(){
+  const a=document.getElementById(decodeURIComponent(location.hash.slice(1)));if(!a)return;
+  if(a.classList.contains('hd'))document.querySelector('header .ft[data-f="todos"]').click();
+  const t=a.querySelector('.rd .ap');if(t&&t.getAttribute('aria-expanded')!=='true')t.click();
+  a.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'});
+}
+abrirHash();addEventListener('hashchange',abrirHash);
+
+// PWA: registro apenas em contexto seguro.
 if('serviceWorker' in navigator && (location.protocol==='https:'||location.hostname==='localhost'||location.hostname==='127.0.0.1')){
   window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(err=>console.warn('Service worker não registrado:',err)));
 }
